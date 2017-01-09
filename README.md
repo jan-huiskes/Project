@@ -27,6 +27,7 @@ De gebruiker kan informatie en data over de Amerikaanse verkiezingen van 2016 zi
 De problemen die kunnen ontstaan is het vinden van een goede dataset, desnoods zal ik de verkiezingen van 2012 doen. Ook de kaart op basis van kiesmannen zal waarschijnlijk lastig worden om te maken. Op de site van Datamaps staan al kaart implementaties en deze zal ik zeker gebruiken om het te maken en dingen aan te passen.
 
 Schets:
+![](doc/schets.jpg)
 
 Bronnen:
 * https://datamaps.github.io/
