@@ -1,0 +1,74 @@
+/*
+Jan Huiskes
+10740929
+*/
+/* positioning */
+.legend { list-style: none; }
+.legend li { float: none; margin-right: 10px; }
+.legend span { border: 1px solid #ccc; float: left; width: 12px; height: 12px; margin: 2px; }
+/* colors */
+.legend .republican { background-color: #B01733; }
+.legend .democratic { background-color: #1441C7; }
+.legend .libertarian { background-color: #FFF700; }
+.legend .other { background-color: #02AD05; }
+
+
+
+/* Back ground color */
+body
+{
+background: #E0E084;
+}
+
+/* Title and text style */
+
+.axTitle {
+  fill: black;
+  font: 16px sans-serif;
+}
+
+.Title {
+  fill: black;
+  font: 25px sans-serif;
+  font-weight: bold;
+}
+#unknown-text {
+  fill: black;
+  font: 25px sans-serif;
+  font-weight: bold;
+}
+
+/* Drop down menu  */
+.drop select{
+  background: #567ba0;;
+  width: 268px;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 1;
+  border: 0;
+  border-radius: 0;
+  height: 34px;
+  color: #fff;
+}
+
+/* Pop up */
+.d3-tip {
+  line-height: 1;
+  padding: 6px;
+  background: rgba(0, 0, 0, 1);
+  color: #fff;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+
+/* Axes style */
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+.axis text {
+  font: 10px sans-serif;
+}

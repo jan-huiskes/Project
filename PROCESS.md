@@ -2,8 +2,12 @@
 
 ## Day 1
 
-* Proposal is gemaakt
+* proposal is gemaakt
 
 * schets: ![](doc/schets.jpg)
 
 ## Day 2
+
+* made design proposal
+
+* start of website with making the usa map, colored
