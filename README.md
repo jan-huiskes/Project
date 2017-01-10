@@ -32,4 +32,5 @@ Schets:
 Bronnen:
 * https://datamaps.github.io/
 * http://www.presidency.ucsb.edu/showelection.php?year=2016
-
+* http://www.electproject.org/2016g
+* http://www.nytimes.com/interactive/2016/11/08/us/politics/election-exit-polls.html?_r=0
