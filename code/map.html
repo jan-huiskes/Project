@@ -9,13 +9,23 @@
           <script src="http://d3js.org/topojson.v1.min.js"></script>
           <script src="http://datamaps.github.io/scripts/datamaps.usa.min.js?v=1"></script>
           <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
-          <script src="http://d3js.org/queue.v1.min.js"></script>
+
 
 
     </head>
     <body>
-      <h2> USA map colored by win political party in 2016</h2>
-      <fieldset>
+      <nav class="fixed-nav-bar">
+        <ul id="nav">
+          <li> <img src="image/flag.png" id="flag"></li>
+          <li><a href="info.html">Info</a></li>
+          <li><a href="map.html">Results</a></li>
+          <li><a href="video.html">Video</a></li>
+        </ul>
+      </nav>
+        <h2> USA map colored by win political party in 2016</h2>
+        <h2> USA map colored by win political party in 2016</h2>
+      <div id="container" style="position: relative; width: 1000px; height: 500px;"></div>
+      <fieldset class="legend">
         <legend>Political parties</legend>
           <ul class="legend">
               <li><span class="republican"></span> republican </li>
@@ -25,7 +35,7 @@
 
           </ul>
         </fieldset>
-      <div id="container" style="position: relative; width: 1000px; height: 500px;"></div>
+        <br></br>
           <script src="map.js"></script>
 
     </body>

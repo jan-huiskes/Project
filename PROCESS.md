@@ -11,3 +11,5 @@
 * made design proposal
 
 * start of website with making the usa map, colored
+
+## Day 3

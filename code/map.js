@@ -41,11 +41,29 @@ data : data.data,
 
 done: function(datamap) {
        datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
-           updateData(geography.id, geography.properties.name)
+           updateData(geography.id)
 
        });
     }
 })
+});
+
+// Gather the JSON datas for dropDown
+d3.json("data/data2.json", function(error, data) {
+
+  // Make drop down menu with the right options
+  var dropDown = d3.select("body").append("div")
+                      .attr("class", "drop")
+                      .append("select").on("change", function() {updateData(this.value)})
+                      .attr("name", "country-list")
+
+  var options = dropDown.selectAll("option")
+             .data(data.data)
+           .enter()
+             .append("option");
+
+  options.text(function (d) {return d.state})
+        .attr("value", function (d) { return d.id; })
 });
 
 // Make svg tag
@@ -63,9 +81,6 @@ var y = d3.scale.linear()
 // Scale x
 var x = d3.scale.ordinal()
     .rangeRoundBands([padding / 2, (width - padding * 2)], .1);
-
-// Color bars
-var color = colors;
 
 // Make axes
 var xAxis = d3.svg.axis()
@@ -97,26 +112,12 @@ svg.call(tip);
 // Gather the JSON datas for first barchart
 d3.json("data/data.json", function(error, data) {
 
-  data = data.data.AK
-  // // Make drop down menu with the right options
-  // var dropDown = d3.select("body").append("div")
-  //                     .attr("class", "drop")
-  //                     .append("select").on("change", function() {updateData(this.value)})
-  //                     .attr("name", "country-list")
-  //
-  //
-  // var options = dropDown.selectAll("option")
-  //            .data(data.data)
-  //          .enter()
-  //            .append("option");
-  //
-  // options.text(function (d) { return d.state ; })
-  //       .attr("value", function (d) { return d.state; })
 
   // Make the x and y data for barchart
-  var scaleDatax = ["Hillary Clinton", "Donald Trump", "Garry Johnson", "Other"]
+  data = data.data.tot
+  var scaleDatax = [ "Donald Trump", "Hillary Clinton", "Garry Johnson", "Other"]
   var scaleDatay = [parseFloat(data.Rvote), parseFloat(data.Dvote), parseFloat(data.Lvote), parseFloat(data.Ovote)]
-  var data = [{"type" : scaleDatax[0], "per" : scaleDatay[0]},{"type" : scaleDatax[1], "per" : scaleDatay[1]},{"type" : scaleDatax[2], "per" : scaleDatay[2]}, {"type" : scaleDatax[3], "per" : scaleDatay[3]}]
+  var data = [{"type" : scaleDatax[0], "per" : scaleDatay[0], "col" : colors[0]},{"type" : scaleDatax[1], "per" : scaleDatay[1], "col" : colors[1]},{"type" : scaleDatax[2], "per" : scaleDatay[2], "col" : colors[2]}, {"type" : scaleDatax[3], "per" : scaleDatay[3], "col" : colors[3]}]
   x.domain(scaleDatax);
   y.domain([0, 100]);
 
@@ -142,7 +143,7 @@ chart.selectAll(".bar")
     .attr("class", "bar")
     .on('mouseover', tip.show)
     .on('mouseout', tip.hide)
-    .style("fill", function(d) { return color[0]; });
+    .style("fill", function(d) { return d.col; });
 
 // Titles for axes and graph
 svg.append("text")
@@ -161,7 +162,7 @@ svg.append("text")
     .attr("class", 'Title')
     .attr("text-anchor", "middle")
     .attr("transform", "translate("+ (width / 2) +","+ padding / 5 +")")
-    .text("Percentage (in %) of votes to candidates in Alabama");
+    .text("Percentage (in %) of total votes to candidates");
 
 
 // Sources and whitespace
@@ -174,39 +175,23 @@ svg.append("text")
 });
 
 // When clicked or chosen from drop down menu, change barchart
-function updateData(id, name) {
+function updateData(id) {
 
-  // Load again
-  queue()
-  	.defer(d3.json, 'data/data.json')
-  	.await(makeMyBarchart2);
-
-
-// Update data to the right data from that country
-function makeMyBarchart2(error, kid, adult){
+d3.json("data/data.json", function(error, data) {
 
   // Remove stuff that needs to be changed
   d3.selectAll(".Title").remove();
   d3.selectAll(".bar").remove();
   d3.selectAll("#unknown-text").remove();
 
-  // If not any data found from that country, it stays true
-  var bool = true
+  data = data.data[id]
+  name = data.state
 
-  // Find the corresponding data sets
-  for (var i = 0; i < kid.data.length; i++){
-    if (kid.data[i].id == id){
-      for (var j = 0; j < adult.data.length; j++){
-        if (adult.data[j].id == id){
+  var scaleDatax = [ "Donald Trump", "Hillary Clinton", "Garry Johnson", "Other"]
+  var scaleDatay = [parseFloat(data.Rvote), parseFloat(data.Dvote), parseFloat(data.Lvote), parseFloat(data.Ovote)]
+  var data = [{"type" : scaleDatax[0], "per" : scaleDatay[0], "col" : colors[0]},{"type" : scaleDatax[1], "per" : scaleDatay[1], "col" : colors[1]},{"type" : scaleDatax[2], "per" : scaleDatay[2], "col" : colors[2]}, {"type" : scaleDatax[3], "per" : scaleDatay[3], "col" : colors[3]}]
 
-      name = kid.data[i].country
 
-      // Scale data again
-      var scaleDatax = ["Child (0-14)", "Adult (15-65)", "Senior (65+)"]
-      var scaleDatay = [parseInt(kid.data[i].kids), parseInt(adult.data[j].adult), 100 - parseInt(kid.data[i].kids) - parseInt(adult.data[j].adult)]
-      var data = [{"type" : scaleDatax[0], "per" : scaleDatay[0]},{"type" : scaleDatax[1], "per" : scaleDatay[1]},{"type" : scaleDatax[2], "per" : scaleDatay[2]}]
-
-      bool = false
 
       // Make the rectangle bars with mouse events and fading
       var bar = chart.selectAll(".bar")
@@ -220,23 +205,12 @@ function makeMyBarchart2(error, kid, adult){
           .attr("opacity", 0)
           .on('mouseover', tip.show)
           .on('mouseout', tip.hide)
-          .style("fill", function(d) { return color(d.type); });
+          .style("fill", function(d) { return d.col; });
 
       bar.transition().duration(2000).attr("opacity", 1)
-    }
-  }}};
 
-  // Display unknown if no data of that country with fading
-  if (bool){
-  var text = svg.append("text")
-      .attr("id", 'unknown-text')
-      .attr("text-anchor", "middle")
-      .attr("opacity", 0)
-      .attr("transform", "translate("+ (width / 2 - padding / 2) +","+ height / 2 +")")
-      .text("Unknown");
 
-      text.transition().duration(2000).attr("opacity", 1)
-    }
+
 
   // Change title with fading
   var title = svg.append("text")
@@ -244,8 +218,8 @@ function makeMyBarchart2(error, kid, adult){
       .attr("text-anchor", "middle")
       .attr("opacity", 0)
       .attr("transform", "translate("+ (width / 2) +","+ padding / 5 +")")
-      .text("Percentage (in %) of demographic groups in " + name);
+      .text("Percentage (in %) of votes in " + name);
 
       title.transition().duration(2000).attr("opacity", 1)
-};
+});
 };

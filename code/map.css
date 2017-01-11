@@ -12,7 +12,48 @@ Jan Huiskes
 .legend .libertarian { background-color: #FFF700; }
 .legend .other { background-color: #02AD05; }
 
+.fixed-nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 50px;
+    background-color: #333;
+}
 
+.legend{
+  width: 50%;
+}
+
+#flag{
+   width: 100px;
+   height: 50px;
+}
+
+#nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 100px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
 
 /* Back ground color */
 body
@@ -49,6 +90,7 @@ background: #E0E084;
   border-radius: 0;
   height: 34px;
   color: #fff;
+
 }
 
 /* Pop up */

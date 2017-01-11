@@ -51,7 +51,7 @@ for row in csvfile3:
     if j == 0:
         jsonfile.write('"state": "' + row[0] + '",')
     else:
-        jsonfile.write('"state": "' + row[0] + '' + row[1] + '",')
+        jsonfile.write('"state": "' + row[0] + ' ' + row[1] + '",')
     jsonfile.write('\n')
     jsonfile.write('"Lvote": ' + str(p2f(row[9 + j])) + ',')
     jsonfile.write('\n')
