@@ -8,8 +8,13 @@
 
 ## Day 2
 
-* made design proposal
+* design proposal gemaakt
 
-* start of website with making the usa map, colored
+* start website, gekleurde kaart
 
 ## Day 3
+* navigation bar
+
+* klikken met muis en dropdown menu
+
+* label kaart

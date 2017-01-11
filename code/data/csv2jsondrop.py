@@ -10,7 +10,7 @@ sys.setdefaultencoding('utf8')
 
 
 # convert data to json
-jsonfile = open('data2.json', 'w')
+jsonfile = open('datadrop.json', 'w')
 csvfile3 = open('data.csv', 'r')
 
 def p2f(x):

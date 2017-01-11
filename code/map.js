@@ -7,9 +7,10 @@ colors = ['#B01733',
 ]
 
 d3.json("data/data.json", function(error, data) {
+  d3.json("data/datalabel.json", function(error, data1) {
 
 // make map
-var map = new Datamap({element: document.getElementById('container'),
+var USmap = new Datamap({element: document.getElementById('container'),
 scope: 'usa',
 geographyConfig: {
   // pop up with name and population, if there is data, else unknown population
@@ -46,10 +47,15 @@ done: function(datamap) {
        });
     }
 })
+
+  data1 = data1.data
+  console.log(data1)
+    USmap.labels({'customLabelText': data1});
+});
 });
 
 // Gather the JSON datas for dropDown
-d3.json("data/data2.json", function(error, data) {
+d3.json("data/datadrop.json", function(error, data) {
 
   // Make drop down menu with the right options
   var dropDown = d3.select("body").append("div")
