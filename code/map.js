@@ -3,12 +3,15 @@
 colors = ['#B01733',
 '#1441C7',
 '#FFF700',
-'#02AD05'
+'#02AD05',
+'#E0E084'
 ]
+
+
 
 d3.json("data/data.json", function(error, data) {
   d3.json("data/datalabel.json", function(error, data1) {
-
+      d3.json("data/databubble.json", function(error, data2) {
 // make map
 var USmap = new Datamap({element: document.getElementById('container'),
 scope: 'usa',
@@ -17,25 +20,19 @@ geographyConfig: {
  popupTemplate: function(geography, data) {
 string = '<div class="hoverinfo">'
 string += '<strong>' + geography.properties.name + '</strong>'
-string += '<br></br>'
-if (data.kiesman != null){
-  string += 'Kiesmannen: ' + data.kiesman
-}
-else {
-  string += 'Kiesmannen democratic: ' + data.Dkiesman
-  string += '<br></br>'
-  string += 'Kiesmannen republican: ' + data.Rkiesman
-}
 string += '</div> '
    return string },
 },
-
+bubblesConfig: {
+  fillOpacity: 1
+},
 fills: {
-  'republican': colors[0], // > 10^9
-  'democrat': colors[1], // > 10^8 and < 10^9
-  'libertarian': colors[2], // > 6*10^7  and < 10^8
+  'republican': colors[0],
+  'democrat': colors[1],
+  'libertarian': colors[2],
   'other': colors[3],
-  defaultFill: colors[1]
+  'tot' : colors[1],
+  defaultFill: 'black'
 },
 // data
 data : data.data,
@@ -48,18 +45,43 @@ done: function(datamap) {
     }
 })
 
-  data1 = data1.data
-  console.log(data1)
-    USmap.labels({'customLabelText': data1});
+  USmap.labels({'customLabelText': data1.data});
+
 });
 });
+});
+
+// check for which year the graph is
+var check = 0
+
+// Make a button
+var button = d3.select(".slider round")
+    .on('change', function(){change()})
+
+    function change(){
+      if (check == 0){
+        d3.select("#container").transition()
+                .duration(500)
+                .style("opacity", 0);
+
+        check = 1
+
+      }
+      else{
+        d3.select("#container").transition()
+                .duration(500)
+                .style("opacity", 1);
+
+        check = 0
+      }
+
+    };
 
 // Gather the JSON datas for dropDown
 d3.json("data/datadrop.json", function(error, data) {
 
   // Make drop down menu with the right options
-  var dropDown = d3.select("body").append("div")
-                      .attr("class", "drop")
+  var dropDown = d3.select(".drop")
                       .append("select").on("change", function() {updateData(this.value)})
                       .attr("name", "country-list")
 
@@ -73,10 +95,10 @@ d3.json("data/datadrop.json", function(error, data) {
 });
 
 // Make svg tag
-var svg = d3.select("body").append("svg").attr("class", "chart")
+var svg = d3.select("#bar").append("svg").attr("class", "chart")
 
 var margin = {top: 20, right: 30, bottom: 50, left: 40},
-    width = 960 - margin.left - margin.right,
+    width = 800 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
     padding = 100
 

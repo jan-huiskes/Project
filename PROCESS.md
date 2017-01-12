@@ -18,3 +18,10 @@
 * klikken met muis en dropdown menu
 
 * label kaart
+
+## Day 4
+* mooi maken pagina, button
+
+* erachter komen dat tweede kaart niet kan, na veel werk
+
+* scatter maken
