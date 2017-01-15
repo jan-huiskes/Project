@@ -22,7 +22,9 @@ Jan Huiskes
     background-color: #333;
 }
 
-
+#pie{
+  position: relative;
+}
 #flag{
    width: 100px;
    height: 50px;
@@ -98,7 +100,6 @@ body
 }
 
 
-
 /* Axes style */
 .axis path,
 .axis line {
@@ -111,10 +112,7 @@ body
 }
 
 
-#bar{
-  float: right;
-  position: relative;
-}
+
 /* The switch - the box around the slider */
 .switch {
   position: relative;

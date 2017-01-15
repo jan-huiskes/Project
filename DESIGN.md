@@ -20,4 +20,4 @@ APIs:
 Bronnen:
 * https://datamaps.github.io/
 * http://www.presidency.ucsb.edu/showelection.php?year=2016
-* http://www.electproject.org/2016g
+*  "Table 233. Educational Attainment by State". United States Census Bureau. 2011. Archived from the original on February 21, 2012. Retrieved 2014-05-23.
