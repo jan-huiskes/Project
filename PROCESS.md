@@ -38,3 +38,11 @@ waarin je high-school, bachelor of advanced grads.
 * interactie pie chart gelukt met kaart. Geen slider meer voor de pie chart
 
 * knop voor kaart met bubbels ter grootte van aantal kiesmannen
+
+## Day 8 16-1-2017
+
+* Pie chart is een donut chart geworden met de legenda erin. Verder heeft de pie chart een pop up functie
+
+* begin informatie pagina
+
+* Interactie bubbels door erop te klikken kan je de donut en barchart allebei aanpassen

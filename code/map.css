@@ -171,3 +171,10 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+.legend2 {
+  font-size: 12px;
+}
+rect {
+  stroke-width: 2;
+}

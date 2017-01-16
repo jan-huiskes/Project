@@ -54,7 +54,18 @@ var check = 0
 function change() {
   if (check == 0 ){
       d3.json("data/databubble.json", function(error, data2) {
-USmap.bubbles(data2.data);
+USmap.bubbles(data2.data, {
+  popupTemplate: function(geo, data) {
+    string = '<div class="hoverinfo">'
+    string += '<strong>' + data.state + '</strong>'
+    string += '<br></br>'
+    string += 'Kiesmannen: ' + data.kiesman + ''
+    string += '</div> '
+    return string
+  }});
+  d3.selectAll(".datamaps-bubble").on('click', function(bubble, i) {
+      updateData(data2.data[i].centered);
+  })
 check = 1
 
 })
@@ -180,23 +191,15 @@ svg.append("text")
     .attr("transform", "translate("+ (width / 2) +","+ padding / 5 +")")
     .text("Percentage (in %) van het totaal aantal stemmen");
 
-
-// Sources and whitespace
-// d3.select("body").append("br")
-// d3.select("body").append("a").attr("href", "http://data.worldbank.org/indicator/SP.POP.TOTL").html("Bron voor data")
-// d3.select("body").append("br")
-// d3.select("body").append("p").html('Jan Huiskes 10740929');
-
-
 });
 
 var radius = Math.min(width, height) / 2;
 
-var color = d3.scale.category10()
+var color = d3.scale.category20b()
 
 var arc = d3.svg.arc()
-    .outerRadius(radius - 10)
-    .innerRadius(0);
+    .outerRadius(radius - 40)
+    .innerRadius(0.5*radius);
 
 var labelArc = d3.svg.arc()
     .outerRadius(radius - 40)
@@ -212,23 +215,65 @@ var svg2 = d3.select("#pie").append("svg")
   .append("g")
     .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
+var legendRectSize = 18;
+var legendSpacing = 4;
+
+var tip2 = d3.tip()
+  .attr('class', 'd3-tip')
+  .offset([-10, 0])
+  .html(function(d, i) {
+    return "<span>Percentage: " + d.value + "</span><strong>%</strong>";
+  })
+
+svg.call(tip2)
+
 d3.json("data/dataedu.json", function(error, data) {
   data = data.data.US
   color.domain(data.map(function(d) { return d.type; }));
 
-  var g = svg2.selectAll(".arc")
+
+  var piechart = svg2.selectAll(".arc")
       .data(pie(data))
     .enter().append("g")
       .attr("class", "arc");
 
-  g.append("path")
+  piechart.on('mouseover', tip2.show)
+  piechart.on('mouseout', tip2.hide)
+
+  piechart.append("path")
       .attr("d", arc)
       .style("fill", function(d) {return color(d.data.type); });
 
-  g.append("text")
-      .attr("transform", function(d) { return "translate(" + labelArc.centroid(d) + ")"; })
-      .attr("dy", ".35em")
-      .text(function(d) { return d.data.type; });
+
+      var legend = svg2.selectAll('.legend2')
+      .data(color.domain())
+      .enter()
+      .append('g')
+      .attr('class', 'legend2')
+      .attr('transform', function(d, i) {
+        var height = legendRectSize + legendSpacing;
+        var offset =  height * color.domain().length / 2;
+        var horz = -2 * legendRectSize;
+        var vert = i * height - offset;
+        return 'translate(' + horz + ',' + vert + ')';
+      });
+
+      legend.append('rect')
+      .attr('width', legendRectSize)
+      .attr('height', legendRectSize)
+      .style('fill', color)
+      .style('stroke', color);
+
+      legend.append('text')
+      .attr('x', legendRectSize + legendSpacing)
+      .attr('y', legendRectSize - legendSpacing)
+      .text(function(d) { return d; });
+
+      svg2.append("text")
+          .attr("class", 'Title')
+          .attr("text-anchor", "middle")
+          .attr("transform", "translate("+ 0 +","+ -185 +")")
+          .text("Percentage (in %) verdeling opleidingen in Amerika");
 });
 
 // When clicked or chosen from drop down menu, change barchart
@@ -240,11 +285,10 @@ d3.json("data/data.json", function(error, data) {
   d3.selectAll(".arc").remove();
   d3.selectAll(".Title").remove();
   d3.selectAll(".bar").remove();
-  d3.selectAll("#unknown-text").remove();
+
 
   data = data.data[id]
   name = data.state
-
   var scaleDatax = [ "Donald Trump", "Hillary Clinton", "Garry Johnson", "Overigen"]
   var scaleDatay = [parseFloat(data.Rvote), parseFloat(data.Dvote), parseFloat(data.Lvote), parseFloat(data.Ovote)]
   var data = [{"type" : scaleDatax[0], "per" : scaleDatay[0], "col" : colors[0]},{"type" : scaleDatax[1], "per" : scaleDatay[1], "col" : colors[1]},{"type" : scaleDatax[2], "per" : scaleDatay[2], "col" : colors[2]}, {"type" : scaleDatax[3], "per" : scaleDatay[3], "col" : colors[3]}]
@@ -284,19 +328,24 @@ d3.json("data/data.json", function(error, data) {
 d3.json("data/dataedu.json", function(error, data) {
   data = data.data[id]
 
-  var g = svg2.selectAll(".arc")
+  var piechart = svg2.selectAll(".arc")
       .data(pie(data))
     .enter().append("g")
       .attr("class", "arc");
 
-  g.append("path")
+    piechart.on('mouseover', tip2.show)
+    piechart.on('mouseout', tip2.hide)
+
+  piechart.append("path")
       .attr("d", arc)
       .style("fill", function(d) {return color(d.data.type); });
 
-  g.append("text")
-      .attr("transform", function(d) { return "translate(" + labelArc.centroid(d) + ")"; })
-      .attr("dy", ".35em")
-      .text(function(d) { return d.data.type; });
+      svg2.append("text")
+          .attr("class", 'Title')
+          .attr("text-anchor", "middle")
+          .attr("transform", "translate("+ 0 +","+ -185 +")")
+          .text("Percentage (in %) verdeling opleidingen in " + name);
+
 });
 
 };
