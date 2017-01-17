@@ -46,3 +46,10 @@ waarin je high-school, bachelor of advanced grads.
 * begin informatie pagina
 
 * Interactie bubbels door erop te klikken kan je de donut en barchart allebei aanpassen
+
+## Day 9 17-1-2017
+* Pagina indeling veranderd van 3 html naar 1
+
+* Pagina start gemaakt met vlag als achtergrond
+
+* pagina informatie begin gemaakt met indeling en deel van de tekst

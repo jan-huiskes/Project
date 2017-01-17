@@ -6,6 +6,9 @@
           <title>Project</title>
            <script src="http://d3js.org/d3.v3.min.js"></script>
            <link rel="stylesheet" type="text/css" href="map.css"/>
+           <link rel="stylesheet" type="text/css" href="info.css"/>
+           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
           <script src="http://d3js.org/topojson.v1.min.js"></script>
             <script src="datamaps.usa.min.js"></script>
             <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
@@ -14,16 +17,117 @@
 
     </head>
     <body>
+
       <nav class="fixed-nav-bar">
+        <div id="nav">
         <ul id="nav">
-          <li> <img src="image/flag.png" id="flag"></li>
-          <li><a href="info.html">Informatie</a></li>
-          <li><a href="map.html">Verkiezingsresultaten 2016</a></li>
-          <li><a href="video.html">Film</a></li>
+          <li> <a id='link-flag' href="#page-info"><img src="image/flag.png" id="flag" ></a><</li>
+          <li><a href="#info">Informatie</a></li>
+          <li><a href="#resultaten">Verkiezingsresultaten 2016</a></li>
+          <li><a href="#video">Filmpje</a></li>
         </ul>
+      </div>
       </nav>
-        <h2> . </h2>
-        <h2> Kaart van Amerika ingekleurd op basis van de winst van de politieke partijen</h2>
+
+
+<div id="page-info">
+  <div id= 'container-start'>
+<div id="text-container">
+  <h1>Amerikaanse verkiezingen 2016</h1>
+  <h3>Informatie, resultaten per staat (gekoppeld aan educatie per staat) en een educatief filmpje</h3>
+    <a href="#info">Klik hier om te beginnen</a>
+  </div>
+</div>
+</div>
+
+      <div id='info'>
+        <div id='container'>
+        <div id='info-tekst'>
+        <h1>Het Amerikaanse kiesstelsel</h1>
+        <div class= 'text'>
+        <p>
+        Op 8 november 2016 werd er in Amerika gestemd voor een nieuwe president. De strijd ging
+        dit keer tussen Hilary Clinton en Donald Trump, zie figuur 1 en 2. Clinton had al veel ervaring in de politieke wereld en
+        Trump was een nieuwkomer uit de zakenwereld.
+      </p>
+    </div>
+      <div class="figure">
+        <p><img src="image/clinton.jpg" width="250"
+          height="300" >
+        <p>Hillary Clinton
+      </div>
+      <div class="figure">
+      <p><img src="image/trump.jpg" width="400"
+        height="300" >
+      <p>Donald Trump
+      </div>
+      <div class ='text'>
+        <p>
+        Clinton was volgens de peilingen populairder dan Trump, maar dat moest natuurlijk uit de stemmingen
+        ook nog blijken. De peilingen bleken correct te zijn: Clinton heeft 48.1 procent van alle
+        stemmen gekregen en Trump kreeg 46.5 procent van alle stemmen. De overige 4.4 procent
+        ging naar overige presidentskandidaten. Donald Trump is echter de nieuwe president van Amerika, want in Amerika
+        wint niet per definitie de kandidaat met de meeste stemmen, maar de kandidaat die de
+        meeste kiesmannen wint wordt de nieuwe president. Dit wordt het kiesmannensysteem
+        genoemd.
+      </p>
+      <div id="bar"></div>
+      <p>
+        Dit systeem is onstaan in de 18de eeuw alle stemmen van de verschillende staten op de een of andere
+        manier naar Washington gebracht worden. Omdat het onmogelijk was om het hele volk naar
+        Washington te laten gaan om hun stem uit te brengen, werden er kiesmannen te paard naar
+        Washington gestuurd. Deze kiesmannen konden vervolgens de stem van het volk van de
+        staat waar ze vandaan kwamen vertegenwoordigen. Destijds moesten kiesmannen wel
+        dagenlang reizen voordat zij in Washington aankwamen, maar tegenwoordig is dit anders en
+        kunnen we in milliseconden informatie overbrengen. Hoe worden de kiesmannen verdeeld over alle staten?
+        Als voorbeeld nemen we de volgende 3 staten: California, Montana en Alabama. Iedere staat
+        krijgt standaard 3 kiesmannen toegewezen. De rest van de kiesmannen worden verdeeld op
+        basis van het aantal inwoners van de staat. California heeft ruim 37 miljoen inwoners en
+        krijgt 55 kiesmannen toegewezen. Montana heeft ruim 4 miljoen inwoners en krijgt 9
+        kiesmannen toegewezen. Tot slot heeft Alabama ruim 1 miljoen inwoners en krijgt hierdoor
+        niet meer dan de standaard 3 kiesmannen toegewezen. Het aantal kiesmannen per staat
+        worden iedere 10 jaar opnieuw verdeeld. De laatste keer dat de kiesmannen zijn verdeeld
+        was in 2010. Aangezien de inwonersaantallen inmiddels anders zijn dan in 2010 hebben
+        sommige staten tijdens de afgelopen verkiezingen hierdoor niet het juiste aantal
+        kiesmannen toegewezen gekregen.
+        Maar hoe Trump door middel van het kiesmannensysteem nou toch gewonnen hebben?
+        Het kiesmannensysteem heet ook wel ‘Winner takes it all’. Dit betekent dat het niet
+        uitmaakt of een presidentskanditaat een staat met 51% of 90% van de stemmen wint, hij of
+        zij wint alle kiesmannen die toegewezen zijn aan die staat. Degene die in totaal de meeste
+        kiesmannen wint, wint de verkiezingen. Tijdens de afgelopen verkiezingen heeft Trump
+        56.9% van de kiesmannen gewonnen. Hilary heeft 43.1% van de kiesmannen gewonnen. En
+        daarom is Trump dus de nieuwe president van Amerika.
+        Nu kun je, je afvragen: is het kiesmannensysteem wel eerlijk?
+        Tegenstanders van het kiesmannensysteem vinden dit systeem erg achterhaald, aangezien
+        dit systeem ontstaan is in de tijd dat informatie overbrengen moeilijk was en langzaam ging.
+        Daarnaast is het krom dat het dus niet uitmaakt met hoeveel procent van de stemmen een
+        presidentskandidaat een staat wint, alle kiesmannen zijn voor de winnaar. Ook is het vreemd
+        dat iedere 10 jaar de kiesmannen opnieuw worden ingedeeld, waarom niet iedere 4 jaar
+        wanneer een nieuwe president verkozen wordt? Aan de andere kant zeggen voorstanders
+        van dit systeem dat dit systeem wel de overmacht van de (qua inwonertal) grotere staten
+        tegengaat.
+        Zijn er niet eerlijkere systemen om een nieuwe president te kiezen?
+        Waarom kiezen we niet voor de middenweg? Allereerst is het eerlijker om bij iedere nieuwe
+        presidentsverkiezing het aantal kiesmannen de herindelen op basis van het aantal inwoners
+        per staat. Ten tweede kan het kiesmannensysteem eerlijker gemaakt worden door het
+        ‘winner takes it all’ systeem te vervangen en dat de presidentskanditaat hetzelfde
+        percentage aan kiesmannen krijgt als percentage stemmen die diegene wint.
+        Dit was het einde van het informatieve filmpje over de Amerikaanse presidentsverkiezingen.
+
+        </p>
+      </div>
+        </div>
+        <div id= 'debat'>
+
+        </div>
+      </div>
+      </div>
+      <script src="info.js"></script>
+
+      <div id= 'resultaten'>
+        <div id='container'>
+        <div id='info-tekst'>
+        <h1> Verkiezingresultaten 2016</h1>
 
 
         <div class="drop"></div>
@@ -32,9 +136,9 @@
           <input type="checkbox" onchange ='change()'>
           <div class="slider round"></div>
         </label>
-      <div id="container" style="position: relative; width: 800px; height: 500px;"></div>
+      <div id="container2" style="position: relative; width: 800px; height: 500px;"></div>
       <!-- <div id="container2" style="position: static; width: 800px; height: 500px;"></div> -->
-      <div id="bar"></div>
+      <div id="bar2"></div>
       <br></br>
 
       <div id="pie"></div>
@@ -52,7 +156,20 @@
           </ul>
         </fieldset>
         <br></br>
-          <script src="map.js"></script>
+      </div>
+      </div>
+      </div>
 
+      <div id='video'>
+        <div id='container'>
+        <div id='info-tekst'>
+          <h1> Filmpje </h1>
+        <iframe width="420" height="315"
+        src="https://www.youtube.com/v/9VEIODJK-1M">
+        </iframe>
+      </div>
+      </div>
+      </div>
+          <script src="map.js"></script>
     </body>
 </html>

@@ -7,6 +7,14 @@ colors = ['#B01733',
 '#E0E084'
 ]
 
+// smooth scrolling
+$(document).on('click', 'a', function(event){
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 500);
+});
 
 var USmap;
 
@@ -15,7 +23,7 @@ d3.json("data/data.json", function(error, data) {
   d3.json("data/datalabel.json", function(error, data1) {
 
 // make map
-USmap = new Datamap({element: document.getElementById('container'),
+USmap = new Datamap({element: document.getElementById('container2'),
 scope: 'usa',
 geographyConfig: {
   // pop up with name and population, if there is data, else unknown population
@@ -94,7 +102,7 @@ d3.json("data/datadrop.json", function(error, data) {
 });
 
 // Make svg tag
-var svg = d3.select("#bar").append("svg").attr("class", "chart")
+var svg = d3.select("#bar2").append("svg").attr("class", "chart")
 
 var margin = {top: 20, right: 30, bottom: 50, left: 40},
     width = 800 - margin.left - margin.right,

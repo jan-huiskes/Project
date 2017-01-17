@@ -1,0 +1,93 @@
+
+
+#page-info {
+  top: 0px;
+  right: 0px;
+  width: 100%;
+  height: 800px;
+	color: #fff;
+  background-image: url("image/flag2.jpg");
+  position: absolute;
+  background-size: cover;
+}
+
+#page-info a:link, a:visited {
+    background-color: #099999;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#container-start{
+  top: 50px;
+  position: absolute;
+}
+
+#text-container{
+  width: 75%;
+   margin: 0 auto;
+}
+
+#info{
+  top: 800px;
+  width: 100%;
+  position: absolute;
+}
+
+#container{
+  top: 50px;
+  width:100%;
+  position: absolute;
+}
+
+#info-tekst{
+  color: #404040;
+  width: 75%;
+   margin: 0 auto;
+}
+
+.Titleinfo {
+  fill: black;
+  font: 25px;
+  font-weight: bold;
+}
+
+div.figure {
+  float: left;
+  width: 40%;
+
+  margin: 30px;
+
+}
+div.figure p {
+  font-style: italic;
+  font-size: smaller;
+  text-indent: 0;
+}
+
+div.text{
+  clear:both;
+}
+
+#debat{
+  width: 100%;
+  height: 500px;
+  background-image: url("image/debat.jpg");
+  background-size: cover;
+
+}
+
+#resultaten{
+  color: #404040;
+  width: 100%;
+  top: 3000px;
+  position: absolute;
+}
+
+
+#video{
+  top: 7000px;
+  position: absolute;
+}
