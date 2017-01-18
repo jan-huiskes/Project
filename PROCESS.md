@@ -52,3 +52,8 @@ waarin je high-school, bachelor of advanced grads.
 * Pagina start gemaakt met vlag als achtergrond. Hier begint de pagina en kan men klikken om te beginnen
 
 * Pagina informatie begin gemaakt met indeling van plaatjes en tekst, deel van de tekst en figuren.
+
+## Day 10 17-1-2017
+* Indelen informatie kopjes in de informatie sectie. Dit ging echter niet helemaal succesvol, totdat rond 3 uur de tip bootstrap voorbij kwam
+
+* Gebruik van bootstrap begrijpen en proberen toe te passen, nog niet heel veel mee gedaan

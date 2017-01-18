@@ -1,13 +1,13 @@
-
+/*
+Jan Huiskes
+10740929
+*/
 
 #page-info {
-  top: 0px;
-  right: 0px;
-  width: 100%;
+  padding-top: 50px;
   height: 800px;
 	color: #fff;
   background-image: url("image/flag2.jpg");
-  position: absolute;
   background-size: cover;
 }
 
@@ -20,33 +20,19 @@
     display: inline-block;
 }
 
-#container-start{
-  top: 50px;
-  position: absolute;
-}
 
 #text-container{
-  width: 75%;
+  float: left;
+  width: 50%;
    margin: 0 auto;
 }
 
-#info{
-  top: 800px;
-  width: 100%;
-  position: absolute;
+
+#info {
+    padding-top: 50px;
+    color: #404040;
 }
 
-#container{
-  top: 50px;
-  width:100%;
-  position: absolute;
-}
-
-#info-tekst{
-  color: #404040;
-  width: 75%;
-   margin: 0 auto;
-}
 
 .Titleinfo {
   fill: black;
@@ -67,27 +53,27 @@ div.figure p {
   text-indent: 0;
 }
 
-div.text{
-  clear:both;
-}
-
 #debat{
   width: 100%;
   height: 500px;
   background-image: url("image/debat.jpg");
   background-size: cover;
-
+  clear:both;
 }
 
 #resultaten{
+  padding-top: 50px;
   color: #404040;
-  width: 100%;
-  top: 3000px;
-  position: absolute;
+
 }
 
+#container2{
+  right: 500px;
+  width: 1200px;
+  height: 800px;
+
+}
 
 #video{
-  top: 7000px;
-  position: absolute;
+  padding-top: 50px;
 }

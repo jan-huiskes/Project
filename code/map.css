@@ -3,9 +3,9 @@ Jan Huiskes
 10740929
 */
 /* positioning */
-.legend { list-style: none; width: 50%; }
-.legend li { float: none; margin-right: 10px; }
-.legend span { border: 1px solid #ccc; float: left; width: 12px; height: 12px; margin: 2px; }
+.legend { list-style: none; width: 50%; text-align: left;}
+.legend li { float: none; }
+.legend span { border: 1px solid #ccc; float: left; width: 12px; height: 12px }
 /* colors */
 .legend .republican { background-color: #B01733; }
 .legend .democratic { background-color: #1441C7; }
@@ -46,7 +46,7 @@ li a {
     display: block;
     color: white;
     text-align: center;
-    padding: 15px 150px;
+    padding: 15px 100px;
     text-decoration: none;
 }
 
@@ -88,14 +88,13 @@ body
 .drop select{
   background: #567ba0;;
   width: 268px;
-  padding: 5px;
   font-size: 16px;
   line-height: 1;
   border: 0;
   border-radius: 0;
   height: 34px;
   color: #fff;
-
+  float: left;
 }
 
 /* Pop up */
@@ -119,6 +118,7 @@ body
 .axis text {
   font: 10px sans-serif;
 }
+
 
 
 
