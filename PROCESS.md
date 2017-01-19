@@ -53,7 +53,12 @@ waarin je high-school, bachelor of advanced grads.
 
 * Pagina informatie begin gemaakt met indeling van plaatjes en tekst, deel van de tekst en figuren.
 
-## Day 10 17-1-2017
+## Day 10 18-1-2017
 * Indelen informatie kopjes in de informatie sectie. Dit ging echter niet helemaal succesvol, totdat rond 3 uur de tip bootstrap voorbij kwam
 
 * Gebruik van bootstrap begrijpen en proberen toe te passen, nog niet heel veel mee gedaan
+
+## Day 11 19-1-2017
+* Prototype af! Indeling pagina gelukt, mooi alles naast elkaar, met mooie foto's. Dit is gelukt met bootstrap
+
+* Bugs eruit halen: blauw worden bronnen optie. Nog mooier met transitions maken

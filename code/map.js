@@ -7,14 +7,6 @@ colors = ['#B01733',
 '#E0E084'
 ]
 
-// smooth scrolling
-$(document).on('click', 'a', function(event){
-    event.preventDefault();
-
-    $('html, body').animate({
-        scrollTop: $( $.attr(this, 'href') ).offset().top
-    }, 500);
-});
 
 var USmap;
 
@@ -91,6 +83,7 @@ d3.json("data/datadrop.json", function(error, data) {
   var dropDown = d3.select(".drop")
                       .append("select").on("change", function() {updateData(this.value)})
                       .attr("name", "country-list")
+                      .attr("class", "btn btn-primary dropdown-toggle")
 
   var options = dropDown.selectAll("option")
              .data(data.data)
@@ -105,8 +98,10 @@ d3.json("data/datadrop.json", function(error, data) {
 var svg = d3.select("#bar2").append("svg").attr("class", "chart")
 
 var margin = {top: 20, right: 30, bottom: 50, left: 40},
-    width = 800 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+    width = 580 - margin.left - margin.right,
+    height = 300 - margin.top - margin.bottom;
+    widthcirc = 400 - margin.left - margin.right;
+    heightcirc = 500 - margin.top - margin.bottom;
     padding = 100
 
 // Scale y
@@ -150,9 +145,9 @@ d3.json("data/data.json", function(error, data) {
 
   // Make the x and y data for barchart
   data = data.data.tot
-  var scaleDatax = [ "Donald Trump", "Hillary Clinton", "Garry Johnson", "Overigen"]
-  var scaleDatay = [parseFloat(data.Rvote), parseFloat(data.Dvote), parseFloat(data.Lvote), parseFloat(data.Ovote)]
-  var data = [{"type" : scaleDatax[0], "per" : scaleDatay[0], "col" : colors[0]},{"type" : scaleDatax[1], "per" : scaleDatay[1], "col" : colors[1]},{"type" : scaleDatax[2], "per" : scaleDatay[2], "col" : colors[2]}, {"type" : scaleDatax[3], "per" : scaleDatay[3], "col" : colors[3]}]
+  var scaleDatax = [ "Donald Trump", "Hillary Clinton", "Overigen"]
+  var scaleDatay = [parseFloat(data.Rvote), parseFloat(data.Dvote), (parseFloat(data.Lvote) + parseFloat(data.Ovote))]
+  var data = [{"type" : scaleDatax[0], "per" : scaleDatay[0], "col" : colors[0]},{"type" : scaleDatax[1], "per" : scaleDatay[1], "col" : colors[1]}, {"type" : scaleDatax[2], "per" : scaleDatay[2], "col" : colors[3]}]
   x.domain(scaleDatax);
   y.domain([0, 100]);
 
@@ -196,14 +191,14 @@ svg.append("text")
 svg.append("text")
     .attr("class", 'Title')
     .attr("text-anchor", "middle")
-    .attr("transform", "translate("+ (width / 2) +","+ padding / 5 +")")
-    .text("Percentage (in %) van het totaal aantal stemmen");
+    .attr("transform", "translate("+ (width / 2.2) +","+ padding / 5 +")")
+    .text("Percentages (in %) stemmen kandidaten in Amerika");
 
 });
 
-var radius = Math.min(width, height) / 2;
+var radius = Math.min(widthcirc, heightcirc) / 2;
 
-var color = d3.scale.category20b()
+var color = d3.scale.category20c()
 
 var arc = d3.svg.arc()
     .outerRadius(radius - 40)
@@ -218,10 +213,10 @@ var pie = d3.layout.pie()
     .value(function(d) { return d.per; });
 
 var svg2 = d3.select("#pie").append("svg")
-    .attr("width", width)
-    .attr("height", height)
+    .attr("width", widthcirc)
+    .attr("height", heightcirc)
   .append("g")
-    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+    .attr("transform", "translate(" + widthcirc / 2 + "," + heightcirc / 2 + ")");
 
 var legendRectSize = 18;
 var legendSpacing = 4;
@@ -281,7 +276,7 @@ d3.json("data/dataedu.json", function(error, data) {
           .attr("class", 'Title')
           .attr("text-anchor", "middle")
           .attr("transform", "translate("+ 0 +","+ -185 +")")
-          .text("Percentage (in %) verdeling opleidingen in Amerika");
+          .text("Percentages (in %) opleidingen in Amerika");
 });
 
 // When clicked or chosen from drop down menu, change barchart
@@ -297,9 +292,9 @@ d3.json("data/data.json", function(error, data) {
 
   data = data.data[id]
   name = data.state
-  var scaleDatax = [ "Donald Trump", "Hillary Clinton", "Garry Johnson", "Overigen"]
-  var scaleDatay = [parseFloat(data.Rvote), parseFloat(data.Dvote), parseFloat(data.Lvote), parseFloat(data.Ovote)]
-  var data = [{"type" : scaleDatax[0], "per" : scaleDatay[0], "col" : colors[0]},{"type" : scaleDatax[1], "per" : scaleDatay[1], "col" : colors[1]},{"type" : scaleDatax[2], "per" : scaleDatay[2], "col" : colors[2]}, {"type" : scaleDatax[3], "per" : scaleDatay[3], "col" : colors[3]}]
+  var scaleDatax = [ "Donald Trump", "Hillary Clinton", "Overigen"]
+  var scaleDatay = [parseFloat(data.Rvote), parseFloat(data.Dvote), (parseFloat(data.Lvote) + parseFloat(data.Ovote))]
+  var data = [{"type" : scaleDatax[0], "per" : scaleDatay[0], "col" : colors[0]},{"type" : scaleDatax[1], "per" : scaleDatay[1], "col" : colors[1]},{"type" : scaleDatax[2], "per" : scaleDatay[2], "col" : colors[3]}]
 
 
 
@@ -327,8 +322,8 @@ d3.json("data/data.json", function(error, data) {
       .attr("class", 'Title')
       .attr("text-anchor", "middle")
       .attr("opacity", 0)
-      .attr("transform", "translate("+ (width / 2) +","+ padding / 5 +")")
-      .text("Percentage (in %) stemmen in " + name);
+      .attr("transform", "translate("+ (width / 2.2) +","+ padding / 5 +")")
+      .text("Percentages (in %) stemmen kandidaten in " + name);
 
       title.transition().duration(2000).attr("opacity", 1)
 });
@@ -352,7 +347,7 @@ d3.json("data/dataedu.json", function(error, data) {
           .attr("class", 'Title')
           .attr("text-anchor", "middle")
           .attr("transform", "translate("+ 0 +","+ -185 +")")
-          .text("Percentage (in %) verdeling opleidingen in " + name);
+          .text("Percentages (in %) opleidingen in " + name);
 
 });
 

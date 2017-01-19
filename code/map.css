@@ -12,20 +12,13 @@ Jan Huiskes
 .legend .libertarian { background-color: #FFF700; }
 .legend .other { background-color: #02AD05; }
 
-.fixed-nav-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  width: 100%;
+.navbar{
   height: 50px;
   background-color: #099999;
 
 }
 
-#pie{
-  position: relative;
-}
+
 #flag{
    width: 100px;
    height: 50px;
@@ -50,13 +43,14 @@ li a {
     text-decoration: none;
 }
 
+
 #link-flag{
   display: block;
   text-align: left;
   padding: 0px 0px;
   text-decoration: none;
 }
-/* Change the link color to #111 (black) on hover */
+/* Change the link color to darker green on hover */
 li a:hover {
     background-color: #045C5C;
 }
@@ -72,30 +66,14 @@ body
 
 /* Title and text style */
 
-.axTitle {
-  fill: black;
-  font: 16px;
-}
-
 .Title {
   fill: black;
-  font: 25px;
+  font-size: 11.5px;
   font-weight: bold;
 }
 
 
-/* Drop down menu  */
-.drop select{
-  background: #567ba0;;
-  width: 268px;
-  font-size: 16px;
-  line-height: 1;
-  border: 0;
-  border-radius: 0;
-  height: 34px;
-  color: #fff;
-  float: left;
-}
+
 
 /* Pop up */
 .d3-tip {
@@ -113,7 +91,6 @@ body
 .axis line {
   fill: none;
   stroke: #000;
-  shape-rendering: crispEdges;
 }
 .axis text {
   font: 10px sans-serif;
@@ -183,7 +160,4 @@ input:checked + .slider:before {
 
 .legend2 {
   font-size: 12px;
-}
-rect {
-  stroke-width: 2;
 }
