@@ -29,7 +29,7 @@ for row in csvfile3:
     jsonfile.write('\n')
     jsonfile.write('{"type": "none", "per":' + str(100 - p2f(row[19 + j])) + '},')
     jsonfile.write('\n')
-    jsonfile.write('{"type": "highschool", "per":' + str(p2f(row[19 + j]) - p2f(row[20 + j]) - p2f(row[21 + j])) + '},')
+    jsonfile.write('{"type": "highschool", "per":' + str(p2f(row[19 + j]) - p2f(row[20 + j])) + '},')
     jsonfile.write('\n')
     jsonfile.write('{"type": "bachelor", "per":' + str(p2f(row[20 + j]) - p2f(row[21 + j])) + '},')
     jsonfile.write('\n')

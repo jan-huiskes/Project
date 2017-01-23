@@ -9,8 +9,8 @@ colors = ['#B01733',
 
 
 var USmap;
-
-
+var path;
+var clickedstate;
 d3.json("data/data.json", function(error, data) {
   d3.json("data/datalabel.json", function(error, data1) {
 
@@ -20,6 +20,7 @@ scope: 'usa',
 geographyConfig: {
   // pop up with name and population, if there is data, else unknown population
  popupTemplate: function(geography, data) {
+
 string = '<div class="hoverinfo">'
 string += '<strong>' + geography.properties.name + '</strong>'
 string += '</div> '
@@ -38,9 +39,15 @@ fills: {
 data : data.data,
 
 done: function(datamap) {
-       datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
+       datamap.svg.selectAll('.datamaps-subunit').on('click', function( geography) {
            updateData(geography.id)
-
+           var m = {};
+           m[geography.id] = "#EE39F7";
+           if (clickedstate != null){
+             m[clickedstate] = datamap.options.fills[data.data[clickedstate].fillKey]
+           }
+           datamap.updateChoropleth(m);
+           clickedstate = geography.id
        });
     }
 })
@@ -127,7 +134,7 @@ var tip = d3.tip()
   .attr('class', 'd3-tip')
   .offset([-10, 0])
   .html(function(d) {
-    return "<span>Percentage: " + d.per + "</span><strong>%</strong>";
+    return "<span>" + d.per + "</span><strong>%</strong>";
   })
 
 // Make space fro chart
@@ -192,7 +199,7 @@ svg.append("text")
     .attr("class", 'Title')
     .attr("text-anchor", "middle")
     .attr("transform", "translate("+ (width / 2.2) +","+ padding / 5 +")")
-    .text("Percentages (in %) stemmen kandidaten in Amerika");
+    .text("Percentage (in %) stemmen gewonnen in Amerika (538 kiesmannen)");
 
 });
 
@@ -225,7 +232,7 @@ var tip2 = d3.tip()
   .attr('class', 'd3-tip')
   .offset([-10, 0])
   .html(function(d, i) {
-    return "<span>Percentage: " + d.value + "</span><strong>%</strong>";
+    return "<span>" + d.value + "</span><strong>%</strong>";
   })
 
 svg.call(tip2)
@@ -235,17 +242,17 @@ d3.json("data/dataedu.json", function(error, data) {
   color.domain(data.map(function(d) { return d.type; }));
 
 
-  var piechart = svg2.selectAll(".arc")
+  path = svg2.selectAll(".arc")
       .data(pie(data))
     .enter().append("g")
       .attr("class", "arc");
 
-  piechart.on('mouseover', tip2.show)
-  piechart.on('mouseout', tip2.hide)
+  path.on('mouseover', tip2.show)
+  path.on('mouseout', tip2.hide)
 
-  piechart.append("path")
+  path.append("path")
       .attr("d", arc)
-      .style("fill", function(d) {return color(d.data.type); });
+      .style("fill", function(d) { return color(d.data.type); });
 
 
       var legend = svg2.selectAll('.legend2')
@@ -276,7 +283,70 @@ d3.json("data/dataedu.json", function(error, data) {
           .attr("class", 'Title')
           .attr("text-anchor", "middle")
           .attr("transform", "translate("+ 0 +","+ -185 +")")
-          .text("Percentages (in %) opleidingen in Amerika");
+          .text("Percentage (in %) van opleidingniveau's in Amerika");
+});
+
+var width3 = 960 - margin.left - margin.right,
+    height3 = 500 - margin.top - margin.bottom;
+
+var x3 = d3.scale.linear()
+    .range([0, width3]);
+
+var y3 = d3.scale.linear()
+    .range([height3, 0]);
+
+var xAxis3 = d3.svg.axis()
+    .scale(x3)
+    .orient("bottom");
+
+var yAxis3 = d3.svg.axis()
+    .scale(y3)
+    .orient("left");
+
+var svg5 = d3.select("#scatter").append("svg")
+    .attr("width", width3 + margin.left + margin.right)
+    .attr("height", height3 + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+d3.json("data/datascatter.json", function(error, data) {
+
+  data = data.data
+
+  x3.domain([d3.min(data, function(d) { return d.smart; })-4, d3.max(data, function(d) { return d.smart; })+4]);
+  y3.domain([d3.min(data, function(d) { return d.vote; })-4, d3.max(data, function(d) { return d.vote; })+4]);
+
+  svg5.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height3 + ")")
+      .call(xAxis3)
+    .append("text")
+      .attr("class", "label")
+      .attr("x", width3)
+      .attr("y", -6)
+      .style("text-anchor", "end")
+      .text("Hoger opgeleid (%)");
+
+  svg5.append("g")
+      .attr("class", "y axis")
+      .call(yAxis3)
+    .append("text")
+      .attr("class", "label")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 6)
+      .attr("dy", ".71em")
+      .style("text-anchor", "end")
+      .text("Meerderheid stemmen (%)")
+
+  svg5.selectAll(".dot")
+      .data(data)
+    .enter().append("circle")
+      .attr("class", "dot")
+      .attr("r", function(d) { return parseFloat(d.radius); })
+      .attr("cx", function(d) { return x3(d.smart); })
+      .attr("cy", function(d) { return y3(d.vote); })
+      .style("fill", function(d) { return d.color; })
+
 });
 
 // When clicked or chosen from drop down menu, change barchart
@@ -285,13 +355,15 @@ function updateData(id) {
 d3.json("data/data.json", function(error, data) {
 
   // Remove stuff that needs to be changed
-  d3.selectAll(".arc").remove();
   d3.selectAll(".Title").remove();
-  d3.selectAll(".bar").remove();
-
+  d3.selectAll('.arc').remove();
 
   data = data.data[id]
   name = data.state
+  kiesman = data.kiesman
+  if (kiesman == null){
+    kiesman = data.totkiesman
+  }
   var scaleDatax = [ "Donald Trump", "Hillary Clinton", "Overigen"]
   var scaleDatay = [parseFloat(data.Rvote), parseFloat(data.Dvote), (parseFloat(data.Lvote) + parseFloat(data.Ovote))]
   var data = [{"type" : scaleDatax[0], "per" : scaleDatay[0], "col" : colors[0]},{"type" : scaleDatax[1], "per" : scaleDatay[1], "col" : colors[1]},{"type" : scaleDatax[2], "per" : scaleDatay[2], "col" : colors[3]}]
@@ -301,53 +373,49 @@ d3.json("data/data.json", function(error, data) {
       // Make the rectangle bars with mouse events and fading
       var bar = chart.selectAll(".bar")
           .data(data)
-        .enter().append("rect")
+        .transition().duration(500)
           .attr("class", "bar")
           .attr("x", function(d) { return x(d.type); })
           .attr("y", function(d) { return y(d.per); })
           .attr("height", function(d) { return height - y(d.per); })
-          .attr("width", x.rangeBand())
-          .attr("opacity", 0)
-          .on('mouseover', tip.show)
-          .on('mouseout', tip.hide)
-          .style("fill", function(d) { return d.col; });
-
-      bar.transition().duration(2000).attr("opacity", 1)
 
 
-
-
-  // Change title with fading
   var title = svg.append("text")
       .attr("class", 'Title')
       .attr("text-anchor", "middle")
-      .attr("opacity", 0)
       .attr("transform", "translate("+ (width / 2.2) +","+ padding / 5 +")")
-      .text("Percentages (in %) stemmen kandidaten in " + name);
+      .text("Percentage (in %) stemmen gewonnen in " + name + ' (' + kiesman + ' kiesmannen)');
 
-      title.transition().duration(2000).attr("opacity", 1)
 });
 
 d3.json("data/dataedu.json", function(error, data) {
   data = data.data[id]
+  color.domain(data.map(function(d) { return d.type; }));
 
-  var piechart = svg2.selectAll(".arc")
+  path = svg2.selectAll("path")
       .data(pie(data))
-    .enter().append("g")
-      .attr("class", "arc");
-
-    piechart.on('mouseover', tip2.show)
-    piechart.on('mouseout', tip2.hide)
-
-  piechart.append("path")
-      .attr("d", arc)
-      .style("fill", function(d) {return color(d.data.type); });
+      .enter().append("path")
+      .attr("class", "arc")
+      .on('mouseover', tip2.show)
+      .on('mouseout', tip2.hide)
+      .style("fill", function(d) { return color(d.data.type); })
+      .transition()
+      .duration(function(d, i) {
+        return i * 400;
+      })
+          .attrTween('d', function(d) {
+     var i = d3.interpolate(d.startAngle+0.1, d.endAngle);
+     return function(t) {
+         d.endAngle = i(t);
+       return arc(d);
+     }
+  });
 
       svg2.append("text")
           .attr("class", 'Title')
           .attr("text-anchor", "middle")
           .attr("transform", "translate("+ 0 +","+ -185 +")")
-          .text("Percentages (in %) opleidingen in " + name);
+          .text("Percentage (in %) van opleidingiveau's in " + name);
 
 });
 

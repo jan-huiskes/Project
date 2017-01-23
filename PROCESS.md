@@ -62,3 +62,10 @@ waarin je high-school, bachelor of advanced grads.
 * Prototype af! Indeling pagina gelukt, mooi alles naast elkaar, met mooie foto's. Dit is gelukt met bootstrap
 
 * Bugs eruit halen: blauw worden bronnen optie. Nog mooier met transitions maken
+
+## Day 12 23-1-2017
+* Mooie transitions van de donut char en bar chart gemaakt als je klikt of iets verandert.
+
+* Klik op een staat verandert de kleur van de geklikte staat in paars. Dit heeft alleen een rare bug dat als je klikt en in de staat blijft dat de staat niet paars gekleurd blijft. Dit ligt aan Datamaps zelf (block org heeft ook een voorbeeld van die bug zie: http://bl.ocks.org/dmachat/b75a5a01cfb31cf92cf5)
+
+* Scatterplot staat er met goede stralen en kleuren. Hier moeten nog klik functies en hover functies komen. Er is hier ook wel een duidelijk verband zichtbaar tussen stemgedrag en opleidingsniveau.

@@ -1,7 +1,12 @@
 // Jan Huiskes
 // 10740929
 
-
+colors = ['#B01733',
+'#1441C7',
+'#FFF700',
+'#02AD05',
+'#E0E084'
+]
 // Make svg tag
 var svg3 = d3.select("#bar").append("svg").attr("id", "chart2")
 var svg4 = d3.select("#barkiesman").append("svg").attr("id", "chart3")
@@ -34,7 +39,7 @@ var tip = d3.tip()
   .attr('class', 'd3-tip')
   .offset([-10, 0])
   .html(function(d) {
-    return "<span>Percentage: " + d.per + "</span><strong>%</strong>";
+    return "<span>" + d.per + "</span><strong>%</strong>";
   })
 
 // Make space fro chart
@@ -110,7 +115,7 @@ svg3.append("text")
     .attr("class", 'Titleinfo')
     .attr("text-anchor", "middle")
     .attr("transform", "translate("+ (width2 / 2) +","+ padding / 5 +")")
-    .text("Percentage (in %) van het totaal aantal stemmen naar de kandidaten");
+    .text("Percentage (in %) van het totaal aantal stemmen gewonnen");
 
     var scaleDatax = [ "Donald Trump", "Hillary Clinton",  "Overigen"]
     var scaleDatay = [(parseFloat(data.Rkiesman)/parseFloat(data.totkiesman))*100, (parseFloat(data.Dkiesman)/parseFloat(data.totkiesman))*100,  0]
@@ -159,7 +164,7 @@ svg3.append("text")
       .attr("class", 'Titleinfo')
       .attr("text-anchor", "middle")
       .attr("transform", "translate("+ (width2 / 2) +","+ padding / 5 +")")
-      .text("Percentage (in %) van het totaal aantal kiesmannen naar de kandidaten");
+      .text("Percentage (in %) van de totaal 538 kiesmannen gewonnen");
 
 
 });
