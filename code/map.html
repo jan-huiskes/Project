@@ -142,7 +142,7 @@
               Als laatste item kan men ook de toggle-switch aan/uit zetten om zo bubbels te laten verschijnen/verdwijnen. Deze bubbels
               liggen op de staten en representeren de grootte van een staat op basis van hun kiesmannen. De bubbels hebben dezelfde interactie als de kaart zelf.
             </p>
-            <a href="#container2" id='uitlegbutton'>Klik hier voor de data</a>
+            <a href="#legend" id='uitlegbutton'>Klik hier voor de data</a>
           </div>
           <div class = 'foto' id= 'debat'></div>
         </div>
@@ -152,6 +152,7 @@
 
       <div class='container-fluid' id='resultaten'>
         <h1> Verkiezingresultaten 2016</h1>
+        <a href="#uitleg" id='uitlegbutton'>Klik hier voor uitleg</a>
         <div class = 'row' id='legend'>
           <div class=".col-md-3">
             <fieldset class="legend">
@@ -165,31 +166,30 @@
           </div>
         </div>
         <div class = 'row'>
-          <div class=".col-md-2">
+          <div class="col-md-2">
             <div class="drop"></div>
           </div>
-          <div class=".col-md-1">
-            <label class="switch">
-              <input type="checkbox" onchange ='change()'>
-              <div class="slider round"></div>
-            </label>
+          <div class="col-md-8">
+            <button class="btn btn-primary" type="reset" value="Reset" onclick="reset()">Reset</button>
           </div>
         </div>
         <div class = 'row'>
           <div class="col-md-7">
             <div id="container2"></div>
-            <a href="#uitleg" id='uitlegbutton'>Klik hier voor uitleg</a>
           </div>
           <div class="col-md-4">
             <div id="bar2"></div>
           </div>
+        </div>
+        <div class = 'row'>
+          <div class="col-md-7">
+            <div id="scatter"></div>
+          </div>
           <div class="col-md-4">
             <div id="pie"></div>
           </div>
-
         </div>
         <div class = 'row'>
-          <div id="scatter"></div>
           <div class = 'foto' id= 'debat2'></div>
         </div>
       </div>

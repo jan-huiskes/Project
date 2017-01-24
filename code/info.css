@@ -114,10 +114,6 @@ iframe{
   color: #fff;
 }
 
-.drop{
-  float:left;
-}
-
 h5 {
   padding-left: 20px;
   padding-bottom: 50px;
@@ -125,4 +121,8 @@ h5 {
 
 #link-bron:hover {
     color: white;
+}
+
+#uitlegbutton{
+  float: right;
 }

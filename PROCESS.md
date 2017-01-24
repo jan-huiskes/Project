@@ -69,3 +69,10 @@ waarin je high-school, bachelor of advanced grads.
 * Klik op een staat verandert de kleur van de geklikte staat in paars. Dit heeft alleen een rare bug dat als je klikt en in de staat blijft dat de staat niet paars gekleurd blijft. Dit ligt aan Datamaps zelf (block org heeft ook een voorbeeld van die bug zie: http://bl.ocks.org/dmachat/b75a5a01cfb31cf92cf5)
 
 * Scatterplot staat er met goede stralen en kleuren. Hier moeten nog klik functies en hover functies komen. Er is hier ook wel een duidelijk verband zichtbaar tussen stemgedrag en opleidingsniveau.
+
+## Day 13 24-1-2017
+* Scatter plot is gelinkt aan de andere visualisaties. Ook zal de scatterplot de opacity aanpassen op basis van de staat die je bekijkt. Het heeft een hover functie en tip.
+
+* De staat in de kaart wordt gekleurd als je die bekijkt dmv de dropdown, klikken op de kaart of scatterplot. De staat wordt dan geel gekleurd.
+
+* Ik heb de slider vervangen en de bubbels weggehaald. In de plaats daarvan heb ik een reset button gemaakt die alle data weer op de eerste toestand zet. 

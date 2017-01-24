@@ -115,7 +115,7 @@ svg3.append("text")
     .attr("class", 'Titleinfo')
     .attr("text-anchor", "middle")
     .attr("transform", "translate("+ (width2 / 2) +","+ padding / 5 +")")
-    .text("Percentage (in %) van het totaal aantal stemmen gewonnen");
+    .text("Verdeling (in %) van het totaal aantal stemmen");
 
     var scaleDatax = [ "Donald Trump", "Hillary Clinton",  "Overigen"]
     var scaleDatay = [(parseFloat(data.Rkiesman)/parseFloat(data.totkiesman))*100, (parseFloat(data.Dkiesman)/parseFloat(data.totkiesman))*100,  0]
@@ -164,7 +164,7 @@ svg3.append("text")
       .attr("class", 'Titleinfo')
       .attr("text-anchor", "middle")
       .attr("transform", "translate("+ (width2 / 2) +","+ padding / 5 +")")
-      .text("Percentage (in %) van de totaal 538 kiesmannen gewonnen");
+      .text("Verdeling (in %) van de totaal 538 kiesmannen");
 
 
 });
