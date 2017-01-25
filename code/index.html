@@ -8,7 +8,8 @@
        <!-- Latest compiled and minified CSS -->
        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-       <link rel="stylesheet" type="text/css" href="map.css"/>
+       <link rel="stylesheet" type="text/css" href="resultaten.css"/>
+       <link rel="stylesheet" type="text/css" href="layout.css"/>
        <link rel="stylesheet" type="text/css" href="info.css"/>
        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
@@ -170,7 +171,7 @@
             <div class="drop"></div>
           </div>
           <div class="col-md-8">
-            <button class="btn btn-primary" type="reset" value="Reset" onclick="reset()">Reset</button>
+            <button class="btn btn-primary" type="reset" value="Reset" onclick="updateData('US')">Reset</button>
           </div>
         </div>
         <div class = 'row'>
@@ -207,12 +208,15 @@
 
       <div class='container-fluid' id="bronnen">
         <h1> Bronnen </h1>
-        <div class='row'><h5>https://datamaps.github.io/</div>
         <div class='row'><h5>http://www.presidency.ucsb.edu/showelection.php?year=2016</div>
         <div class='row'><h5>"Table 233. Educational Attainment by State". United States Census Bureau. 2011. Archived from the original on February 21, 2012. Retrieved 2014-05-23.</div>
       </div>
 
       <script src="map.js"></script>
+      <script src="bar.js"></script>
+      <script src="scatter.js"></script>
+      <script src="donut.js"></script>
+      <script src="update.js"></script>
       <script src="scroll.js"></script>
 
     </body>

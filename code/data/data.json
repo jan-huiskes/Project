@@ -1,4 +1,13 @@
 {"data" : {
+"US": {"fillKey": "tot",
+"totkiesman": 538,
+"Dkiesman": 232,
+"Rkiesman": 306,
+"Rvote": 46.2,
+"Dvote": 48.2,
+"state": "Amerika",
+"Lvote": 3.3,
+"Ovote": 2.3},
 "AL": {"fillKey": "republican",
 "kiesman": 9,
 "Rvote": 62.1,
@@ -357,15 +366,6 @@
 "Dvote": 21.9,
 "state": "Wyoming",
 "Lvote": 5.2,
-"Ovote": 4.7},
-"tot": {"fillKey": "tot",
-"totkiesman": 538,
-"Dkiesman": 232,
-"Rkiesman": 306,
-"Rvote": 46.2,
-"Dvote": 48.2,
-"state": "Totals",
-"Lvote": 3.3,
-"Ovote": 2.3}
+"Ovote": 4.7}
 
 }}

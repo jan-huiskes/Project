@@ -1,0 +1,126 @@
+/*
+Jan Huiskes
+10740929
+Algemene layout van de pagina. Zoals hoe alles is geordend en hoe de pagina in zijn geheel eruit ziet.
+*/
+
+
+body{
+  color: #404040;
+  text-align: center;
+}
+
+.container-fluid{
+    padding-top: 50px;
+}
+
+.foto{
+    height: 500px;
+  background-size: cover;
+  clear:both;
+}
+
+
+#uitleg{
+  padding-top: 50px;
+}
+#page-info {
+  height: 800px;
+	color: #fff;
+  background-image: url("image/flag2.jpg");
+  background-size: cover;
+}
+
+#text-container{
+  float: left;
+  width: 50%;
+   margin: 0 auto;
+}
+
+
+#debat{
+  background-image: url("image/debat.jpg");
+}
+
+#debat2{
+  background-image: url("image/trump2.jpg");
+}
+
+#debat3{
+  background-image: url("image/clinton2.jpg");
+}
+
+h1{
+  padding-bottom: 30px;
+}
+
+#text-container > h1{
+  padding-bottom: 0px;
+}
+
+#bronnen{
+  text-align: left;
+  background-color: #099999;
+  color: #fff;
+}
+
+h5 {
+  padding-left: 20px;
+  padding-bottom: 50px;
+}
+
+/*navigation bar*/
+
+.navbar{
+  height: 50px;
+  background-color: #099999;
+
+}
+
+
+#flag{
+   width: 100px;
+   height: 50px;
+}
+
+#nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px 100px;
+    text-decoration: none;
+}
+
+
+#link-flag{
+  display: block;
+  text-align: left;
+  padding: 0px 0px;
+  text-decoration: none;
+}
+
+li a:hover {
+    background-color: #045C5C;
+    color: white;
+}
+
+li a:link, a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+
+#link-flag:hover{
+background-color: transparent;
+}

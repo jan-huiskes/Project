@@ -1,4 +1,5 @@
 {"data" : [
+{"id": "US","state": "Amerika"},
 {"id": "AL","state": "Alabama"},
 {"id": "AK","state": "Alaska"},
 {"id": "AZ","state": "Arizona"},
@@ -49,7 +50,6 @@
 {"id": "WA","state": "Washington"},
 {"id": "WV","state": "West Virginia"},
 {"id": "WI","state": "Wisconsin"},
-{"id": "WY","state": "Wyoming"},
-{"id": "tot","state": "Totals"}
+{"id": "WY","state": "Wyoming"}
 
 ]}

@@ -3,7 +3,6 @@
 
 import csv
 import json
-# encoding = utf8, for characters that aren't recognized by python
 import sys
 reload(sys)
 sys.setdefaultencoding('utf8')
@@ -15,8 +14,6 @@ def p2f(x):
 def c2p(x):
     return float(x.replace(',','.'))
 
-
-# convert data to json
 
 jsonfile = open('datascatter.json', 'w')
 with open('data.csv', 'r') as file1, open('dataedu.csv', 'r') as file2:
@@ -30,10 +27,9 @@ with open('data.csv', 'r') as file1, open('dataedu.csv', 'r') as file2:
             j = 1
         else:
             j = 0
-        # skip DC and total votes
-        if x[10 + j] != 'tot' and x[10 + j] != 'DC':
+        # skip DC en total votes, DC omdat deze staat erg anders is dan de rest (hoog opgeleid)
+        if x[10 + j] != 'US' and x[10 + j] != 'DC':
             jsonfile.write('{ "id" : "' + x[10 + j] + '",')
-            # write rows based on the popualtion data
             if int(x[4 + j]) == 0:
                 jsonfile.write('"color": "#B01733",')
                 jsonfile.write('\n')

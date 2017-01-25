@@ -75,4 +75,9 @@ waarin je high-school, bachelor of advanced grads.
 
 * De staat in de kaart wordt gekleurd als je die bekijkt dmv de dropdown, klikken op de kaart of scatterplot. De staat wordt dan geel gekleurd.
 
-* Ik heb de slider vervangen en de bubbels weggehaald. In de plaats daarvan heb ik een reset button gemaakt die alle data weer op de eerste toestand zet. 
+* Ik heb de slider vervangen en de bubbels weggehaald. In de plaats daarvan heb ik een reset button gemaakt die alle data weer op de eerste toestand zet.
+
+## Day 14 25-1-2017
+* CSS en JS files goed gesorteerd en in mooie verschillende files gezet. Niet meer dat alles in 1 file zit. Verder alles voorzien van commentaar
+
+* Bug van dropdown menu gefixt. De dropdown menu gaat nu ook mee met de update en wordt dus op de goede staat gezet wanneer alles wordt geupdate aan een staat.

@@ -1,13 +1,17 @@
 // Jan Huiskes
 // 10740929
+// JS bestand voor de barcharts in  het informatie gedeeelte van de webpagina. Dit zijn twee barcharts, een over de totale stemmen
+// en de ander over de kiesmannen
 
-colors = ['#B01733',
+// Algemene kleuren voor de visualisaties
+var colors = ['#B01733',
 '#1441C7',
 '#FFF700',
 '#02AD05',
 '#E0E084'
 ]
-// Make svg tag
+
+// Maak svg tag
 var svg3 = d3.select("#bar").append("svg").attr("id", "chart2")
 var svg4 = d3.select("#barkiesman").append("svg").attr("id", "chart3")
 
@@ -24,7 +28,7 @@ var y2 = d3.scale.linear()
 var x2 = d3.scale.ordinal()
     .rangeRoundBands([padding / 2, (width2 - padding * 2)], .1);
 
-// Make axes
+// Maak axes
 var xAxis2 = d3.svg.axis()
     .scale(x2)
     .orient("bottom");
@@ -34,7 +38,7 @@ var yAxis2 = d3.svg.axis()
     .orient("left");
 
 
-// d3.tip for mouse events on bars
+// d3.tip voor muis events op de bars
 var tip = d3.tip()
   .attr('class', 'd3-tip')
   .offset([-10, 0])
@@ -42,7 +46,7 @@ var tip = d3.tip()
     return "<span>" + d.per + "</span><strong>%</strong>";
   })
 
-// Make space fro chart
+// Maak ruimte voor de barcharts
 var chartinfo = d3.select("#chart2")
     .attr("width", width2 + margin.left + margin.right)
     .attr("height", height2 + margin.top + margin.bottom)
@@ -58,23 +62,22 @@ var chartkiesman = d3.select("#chart3")
 
 svg3.call(tip);
 
+// functie die een getal op 1 decimal afrondt
 function round(x){
   return Math.round(x * 10)/10
 }
 
-// Gather the JSON datas for first barchart
 d3.json("data/data.json", function(error, data) {
 
-
-  // Make the x and y data for barchart
-  data = data.data.tot
+  // x en y data voor de barchart klaarmaken
+  data = data.data.US
   var scaleDatax = [ "Donald Trump", "Hillary Clinton",  "Overigen"]
   var scaleDatay = [parseFloat(data.Rvote), parseFloat(data.Dvote), parseFloat(data.Ovote)]
   var data1 = [{"type" : scaleDatax[0], "per" : scaleDatay[0], "col" : colors[0]},{"type" : scaleDatax[1], "per" : scaleDatay[1], "col" : colors[1]},{"type" : scaleDatax[2], "per" : round(100 - scaleDatay[0] - scaleDatay[1]), "col" : colors[3]}]
   x2.domain(scaleDatax);
   y2.domain([0, 100]);
 
-// Make the axes with tags
+// Maak de axes
 chartinfo.append("g")
     .attr("class", "axis")
     .attr("transform", "translate(0," + height2 + ")")
@@ -85,7 +88,7 @@ chartinfo.append("g")
     .attr("transform", "translate(" + padding / 2 + ", 0)")
     .call(yAxis2);
 
-// Make the rectangle bars with mouse events
+// Maak de bars in de barchart met muis events
 chartinfo.selectAll(".barinfo")
     .data(data1)
   .enter().append("rect")
@@ -98,7 +101,7 @@ chartinfo.selectAll(".barinfo")
     .on('mouseout', tip.hide)
     .style("fill", function(d) { return d.col; });
 
-// Titles for axes and graph
+// Titels
 svg3.append("text")
     .attr("class", 'axTitle')
     .attr("text-anchor", "middle")
@@ -117,13 +120,13 @@ svg3.append("text")
     .attr("transform", "translate("+ (width2 / 2) +","+ padding / 5 +")")
     .text("Verdeling (in %) van het totaal aantal stemmen");
 
+    // Zelfde voor de tweede barchart
     var scaleDatax = [ "Donald Trump", "Hillary Clinton",  "Overigen"]
     var scaleDatay = [(parseFloat(data.Rkiesman)/parseFloat(data.totkiesman))*100, (parseFloat(data.Dkiesman)/parseFloat(data.totkiesman))*100,  0]
     var data = [{"type" : scaleDatax[0], "per" : round(scaleDatay[0]), "col" : colors[0]},{"type" : scaleDatax[1], "per" : round(scaleDatay[1]), "col" : colors[1]},{"type" : scaleDatax[2], "per" : scaleDatay[2], "col" : colors[3]}]
     x2.domain(scaleDatax);
     y2.domain([0, 100]);
 
-  // Make the axes with tags
   chartkiesman.append("g")
       .attr("class", "axis")
       .attr("transform", "translate(0," + height2 + ")")
@@ -134,7 +137,6 @@ svg3.append("text")
       .attr("transform", "translate(" + padding / 2 + ", 0)")
       .call(yAxis2);
 
-  // Make the rectangle bars with mouse events
   chartkiesman.selectAll(".barinfo")
       .data(data)
     .enter().append("rect")
@@ -147,7 +149,6 @@ svg3.append("text")
       .on('mouseout', tip.hide)
       .style("fill", function(d) { return d.col; });
 
-  // Titles for axes and graph
   svg4.append("text")
       .attr("class", 'axTitle')
       .attr("text-anchor", "middle")

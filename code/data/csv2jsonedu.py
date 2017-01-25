@@ -3,13 +3,11 @@
 
 import csv
 import json
-# encoding = utf8, for characters that aren't recognized by python
 import sys
 reload(sys)
 sys.setdefaultencoding('utf8')
 
 
-# convert data to json
 jsonfile = open('dataedu.json', 'w')
 csvfile3 = open('dataedu.csv', 'r')
 

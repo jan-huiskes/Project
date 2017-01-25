@@ -3,13 +3,11 @@
 
 import csv
 import json
-# encoding = utf8, for characters that aren't recognized by python
 import sys
 reload(sys)
 sys.setdefaultencoding('utf8')
 
 
-# convert data to json
 jsonfile = open('datadrop.json', 'w')
 csvfile3 = open('data.csv', 'r')
 
@@ -26,7 +24,6 @@ for row in csvfile3:
     else:
         j = 0
     jsonfile.write('{"id": "' + row[10 + j] + '",')
-    # write rows based on the popualtion data
     if j == 0:
         jsonfile.write('"state": "' + row[0] + '"}')
     else:

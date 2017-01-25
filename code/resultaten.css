@@ -1,70 +1,40 @@
 /*
 Jan Huiskes
 10740929
+De CSS van de visualisaties en alles wat daarbij komt (zoals legenda's)
 */
-/* positioning */
+
+/*legenda's*/
+
+/* positionering */
 .legend { list-style: none; width: 50%; text-align: left;}
 .legend li { float: none; }
 .legend span { border: 1px solid #ccc; float: left; width: 12px; height: 12px }
-/* colors */
+/* kleuren */
 .legend .republican { background-color: #B01733; }
 .legend .democratic { background-color: #1441C7; }
 .legend .libertarian { background-color: #FFF700; }
 .legend .other { background-color: #02AD05; }
 
-.navbar{
-  height: 50px;
-  background-color: #099999;
 
+.legend2 {
+  font-size: 12px;
 }
 
 
-#flag{
-   width: 100px;
-   height: 50px;
+#legend{
+  padding-bottom: 50px;
 }
 
-#nav {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
+/* map */
 
-li {
-    float: left;
-}
-
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 15px 100px;
-    text-decoration: none;
+#container2{
+  height: 700px;
 }
 
 
-#link-flag{
-  display: block;
-  text-align: left;
-  padding: 0px 0px;
-  text-decoration: none;
-}
-/* Change the link color to darker green on hover */
-li a:hover {
-    background-color: #045C5C;
-}
 
-#link-flag:hover{
-background-color: transparent;
-}
-/* Back ground color */
-body
-{
-   text-align: center;
-}
-
-/* Title and text style */
+/* Titel en tekst style */
 
 .Title {
   fill: black;
@@ -84,7 +54,7 @@ body
   font-weight: bold;
 }
 
-
+/*hover scatterplot*/
 .dot:hover{
   fill: orange;
 }
@@ -107,12 +77,4 @@ body
 }
 .axis text {
   font: 10px sans-serif;
-}
-
-
-
-
-
-.legend2 {
-  font-size: 12px;
 }
