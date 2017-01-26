@@ -4,7 +4,7 @@
 <html>
     <head>
        <title>Project</title>
-       <script src="http://d3js.org/d3.v3.min.js"></script>
+       <script src="d3.js"></script>
        <!-- Latest compiled and minified CSS -->
        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -13,9 +13,9 @@
        <link rel="stylesheet" type="text/css" href="info.css"/>
        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-        <script src="http://d3js.org/topojson.v1.min.js"></script>
+        <script src="d3-topojson.js"></script>
         <script src="datamaps.usa.min.js"></script>
-        <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+        <script src="d3-tooltip.js"></script>
     </head>
     <body>
 
@@ -137,11 +137,15 @@
               Het doel van de data van de Amerikaanse verkiezingen is om de gebruiker een gedetailleerd beeld te geven van deze verkiezingen.
               De gebruiker kan met de kaart of een dropdown-menu een staat selecteren en de barchart en donutchart zullen zich daarop specifiek aanpassen.
               Op de barchart is te zien wat de uitslag van de verkiezingen was in die staat. Op de donutchart is te zien wat de verdeling van educatieve diploma's is in die staat:
-              hoeveel procent heeft geen opleiding, hoeveel alleen high-school, etc. Dit gegeven kan een verband geven tussen bevolkingslagen (qua educatie) en stemgedrag.
+              hoeveel procent heeft geen opleiding, hoeveel alleen high-school, etc. Al dit is ook gelinkt met een scatterplot.
+              Deze plot geeft de staten weer (grootte van de cirkels is het aantal kiesmannen en kleur de gewonnen partij in die staat) met het percentage
+              hoger opgeleiden tegen het percentage stemmen waarmee de winnaar heeft gewonnen. Hier is mooi en duidelijk te zien dat er een verband is tussen
+              opleidingsniveau en stemgedrag bij de amerikaanse verkiezingen, waar lageropgeleiden voor Trump kiezen en hoger opgeleiden voor Hillary.
               Beide charts hebben een pop-up functie die verschijnt als men met de muis erover heen gaat en de pop-up zal dan het percentage aangeven. De kaart is
               gelabeld met de hoeveelheid kiesmannen die een staat heeft en ook de kaart heeft een pop-up mechanisme die de naam van de staat weergeeft.
-              Als laatste item kan men ook de toggle-switch aan/uit zetten om zo bubbels te laten verschijnen/verdwijnen. Deze bubbels
-              liggen op de staten en representeren de grootte van een staat op basis van hun kiesmannen. De bubbels hebben dezelfde interactie als de kaart zelf.
+              De scatter plot geeft de staatnaam, coordinaten en aantal kiesmannen weer met hoveren. Ook verandert de kleur van de stip op dat moment.
+              Door een staat aan te klikken worden verder niet alleen de bar- en donutchart aangepast maar ook op de kaart wordt de staat geel gekleurd en
+              in de scatterplot vervagen de stippen behalve de gekozen staat.
             </p>
             <a href="#legend" id='uitlegbutton'>Klik hier voor de data</a>
           </div>

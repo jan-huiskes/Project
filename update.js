@@ -12,11 +12,11 @@ d3.json("data/data.json", function(error, data) {
   d3.selectAll('.arc').remove();
 
   // Goeie dataset en ook juiste kiesmannen
-  data = data.data[id]
-  name = data.state
-  kiesman = data.kiesman
+  data1 = data.data[id]
+  name = data1.state
+  kiesman = data1.kiesman
   if (kiesman == null){
-    kiesman = data.totkiesman
+    kiesman = data1.totkiesman
   }
 
   // Voor een state
@@ -25,7 +25,7 @@ d3.json("data/data.json", function(error, data) {
     // Pas kaart aan met de staat te highlighten en de vorige staat weer normaal te kleuren
     var m = {};
     if (clickedstate != null){
-      m[clickedstate] = USmap.options.fills[data.fillKey]
+      m[clickedstate] = USmap.options.fills[data.data[clickedstate].fillKey]
     };
     m[id] = "#F5FF2E";
     USmap.updateChoropleth(m);
@@ -73,7 +73,7 @@ d3.json("data/data.json", function(error, data) {
     var m = {};
     if (clickedstate != null)
     {
-      m[clickedstate] = USmap.options.fills[data.fillKey]
+      m[clickedstate] = USmap.options.fills[data.data[clickedstate].fillKey]
     };
     USmap.updateChoropleth(m);
 
@@ -109,11 +109,11 @@ d3.json("data/data.json", function(error, data) {
 
   // Maakt bar chart met transition
   var scaleDatax = [ "Donald Trump", "Hillary Clinton", "Overigen"]
-  var scaleDatay = [parseFloat(data.Rvote), parseFloat(data.Dvote), round(parseFloat(data.Lvote) + parseFloat(data.Ovote))]
+  var scaleDatay = [parseFloat(data1.Rvote), parseFloat(data1.Dvote), round(parseFloat(data1.Lvote) + parseFloat(data1.Ovote))]
   var data = [{"type" : scaleDatax[0], "per" : scaleDatay[0], "col" : colors[0]},{"type" : scaleDatax[1], "per" : scaleDatay[1], "col" : colors[1]},{"type" : scaleDatax[2], "per" : scaleDatay[2], "col" : colors[3]}]
 
   var bar = chart.selectAll(".bar")
-      .data(data)
+      .data(data1)
     .transition().duration(500)
       .attr("class", "bar")
       .attr("x", function(d) { return x(d.type); })
