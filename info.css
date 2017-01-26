@@ -7,7 +7,7 @@ Style van het informatie gedeelte van de pagina. Alle tekstvakken en buttons daa
 
 /* Buttons */
 #page-info a:link, a:visited {
-    background-color: #099999;
+    background-color: #4A9EFF;
     color: white;
     padding: 14px 25px;
     text-align: center;
@@ -15,15 +15,9 @@ Style van het informatie gedeelte van de pagina. Alle tekstvakken en buttons daa
     display: inline-block;
 }
 
-#uitlegbutton {
-    background-color: #099999;
-    color: white;
-    float: right;
-    padding: 14px 25px;
-    text-align: left;
-    text-decoration: none;
-    display: inline-block;
-}
+
+
+
 
 /* Titels en onderschriften */
 
@@ -36,13 +30,13 @@ Style van het informatie gedeelte van de pagina. Alle tekstvakken en buttons daa
 div.figure {
   float: left;
   width: 40%;
-
   margin: 30px;
+  text-align: center;
 
 }
 div.figure p {
   font-style: italic;
-  font-size: smaller;
+  font-size: 12px;
   text-indent: 0;
 }
 

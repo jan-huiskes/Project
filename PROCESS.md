@@ -81,3 +81,10 @@ waarin je high-school, bachelor of advanced grads.
 * CSS en JS files goed gesorteerd en in mooie verschillende files gezet. Niet meer dat alles in 1 file zit. Verder alles voorzien van commentaar
 
 * Bug van dropdown menu gefixt. De dropdown menu gaat nu ook mee met de update en wordt dus op de goede staat gezet wanneer alles wordt geupdate aan een staat.
+
+## Day 15 26-1-2017
+* API's lokaal maken zodat github mijn pagina ook kan runnen
+
+* Informatie layout heel anders. Ronde plaatjes, twee delen opsplitsen, waarvan het eerste deel info is en het tweede deel algemene verkiezingsuitslagen.
+
+* Parallax achtergond plaatjes

@@ -111,6 +111,7 @@ d3.json("data/data.json", function(error, data) {
   var scaleDatax = [ "Donald Trump", "Hillary Clinton", "Overigen"]
   var scaleDatay = [parseFloat(data1.Rvote), parseFloat(data1.Dvote), round(parseFloat(data1.Lvote) + parseFloat(data1.Ovote))]
   var data = [{"type" : scaleDatax[0], "per" : scaleDatay[0], "col" : colors[0]},{"type" : scaleDatax[1], "per" : scaleDatay[1], "col" : colors[1]},{"type" : scaleDatax[2], "per" : scaleDatay[2], "col" : colors[3]}]
+
   var bar = chart.selectAll(".bar")
       .data(data)
     .transition().duration(500)

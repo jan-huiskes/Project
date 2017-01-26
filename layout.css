@@ -12,18 +12,33 @@ body{
 
 .container-fluid{
     padding-top: 50px;
+    background-color: #F0F8FF;
 }
 
-.foto{
+.col-md-4{
+  padding-top: 50px;
+  text-align: left;
+}
+
+.parallax {
     height: 500px;
-  background-size: cover;
-  clear:both;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    clear: both;
 }
 
 
 #uitleg{
-  padding-top: 50px;
+  text-align: left;
+  padding-bottom: 50px;
 }
+
+#bar{
+  padding-bottom: 100px;
+}
+
 #page-info {
   height: 800px;
 	color: #fff;
@@ -37,6 +52,9 @@ body{
    margin: 0 auto;
 }
 
+#globaal{
+  padding-top: 50px;
+}
 
 #debat{
   background-image: url("image/debat.jpg");
@@ -50,6 +68,10 @@ body{
   background-image: url("image/clinton2.jpg");
 }
 
+#debat4{
+  background-image: url("image/debat2.jpg");
+}
+
 h1{
   padding-bottom: 30px;
 }
@@ -60,8 +82,12 @@ h1{
 
 #bronnen{
   text-align: left;
-  background-color: #099999;
+  background-color: #4A9EFF;
   color: #fff;
+}
+
+h4{
+  padding-top: 20px;
 }
 
 h5 {
@@ -73,7 +99,7 @@ h5 {
 
 .navbar{
   height: 50px;
-  background-color: #099999;
+  background-color: #4A9EFF;
 
 }
 
@@ -111,7 +137,7 @@ li a {
 }
 
 li a:hover {
-    background-color: #045C5C;
+    background-color: #0776F5;
     color: white;
 }
 
