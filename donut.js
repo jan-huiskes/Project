@@ -12,7 +12,7 @@ var widthcirc = 400 - margin.left - margin.right;
 var radius = Math.min(widthcirc, heightcirc) / 2;
 
 
-var color = d3.scale.category20c()
+var color = d3.scale.category20b()
 
 // innerRadius een waarde geven boven 0 maakt een donut chart ipv pie
 var arc = d3.svg.arc()
@@ -64,7 +64,8 @@ d3.json("data/dataedu.json", function(error, data) {
 
   path.append("path")
       .attr("d", arc)
-      .style("fill", function(d) { return color(d.data.type); });
+      .style("fill", function(d) { return color(d.data.type); })
+      .style("stroke-width", 2);
 
   // Maakt een legenda midden in de donut chart
   var legend = svg2.selectAll('.legend2')

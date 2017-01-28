@@ -98,5 +98,7 @@ scatter.on('mouseover', tip3.show)
       .attr("cx", function(d) { return x3(d.smart); })
       .attr("cy", function(d) { return y3(d.vote); })
       .attr("fill", function(d) { return d.color; })
+      .attr("stroke", function(d) { return d.color; })
+      .style("stroke-width", 2);
 
 });

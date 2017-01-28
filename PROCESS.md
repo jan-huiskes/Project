@@ -88,3 +88,9 @@ waarin je high-school, bachelor of advanced grads.
 * Informatie layout heel anders. Ronde plaatjes, twee delen opsplitsen, waarvan het eerste deel info is en het tweede deel algemene verkiezingsuitslagen.
 
 * Parallax achtergond plaatjes
+
+## Day 15 28-1-2017
+Omdat ik maandag niet kan werken, is dit wat ik ongeveer had gedaan:
+* Alle visualisaties hebben hover en wel zo dat alleen de border verandert van een element maar de kleur nog wel goed zichtbaar is want die is belangrijk voor het aangeven van de winnaar.
+
+* To do: ik heb nu de kaart zo verandert dat als je klikt de kleur rood of blauw van de staat lichter wordt en niet meer geel, want hier is ook de kleur belangrijk. Ik wil nog kijken of ik alleen de border kan aanpassen

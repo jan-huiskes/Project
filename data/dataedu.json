@@ -1,263 +1,263 @@
 {"data" : {
 "US": [
-{"type": "none", "per":14.7},
+{"type": "advanced", "per":10.3},
+{"type": "bachelor", "per":17.6},
 {"type": "highschool", "per":57.4},
-{"type": "bachelor", "per":17.6},
-{"type": "advanced", "per":10.3}],
+{"type": "none", "per":14.7}],
 "AL": [
-{"type": "none", "per":17.9},
-{"type": "highschool", "per":60.1},
+{"type": "advanced", "per":7.7},
 {"type": "bachelor", "per":14.3},
-{"type": "advanced", "per":7.7}],
-"AK": [
-{"type": "none", "per":8.6},
-{"type": "highschool", "per":64.8},
-{"type": "bachelor", "per":17.6},
-{"type": "advanced", "per":9.0}],
-"AZ": [
-{"type": "none", "per":15.8},
-{"type": "highschool", "per":58.6},
-{"type": "bachelor", "per":16.3},
-{"type": "advanced", "per":9.3}],
-"AR": [
-{"type": "none", "per":17.6},
-{"type": "highschool", "per":63.5},
-{"type": "bachelor", "per":12.8},
-{"type": "advanced", "per":6.1}],
-"CA": [
-{"type": "none", "per":19.4},
-{"type": "highschool", "per":50.7},
-{"type": "bachelor", "per":19.2},
-{"type": "advanced", "per":10.7}],
-"CO": [
-{"type": "none", "per":10.7},
-{"type": "highschool", "per":53.4},
-{"type": "bachelor", "per":23.2},
-{"type": "advanced", "per":12.7}],
-"CT": [
-{"type": "none", "per":11.4},
-{"type": "highschool", "per":53.0},
-{"type": "bachelor", "per":20.1},
-{"type": "advanced", "per":15.5}],
-"DE": [
-{"type": "none", "per":12.6},
-{"type": "highschool", "per":58.7},
-{"type": "bachelor", "per":17.3},
-{"type": "advanced", "per":11.4}],
-"DC": [
-{"type": "none", "per":12.9},
-{"type": "highschool", "per":38.6},
-{"type": "bachelor", "per":20.5},
-{"type": "advanced", "per":28.0}],
-"FL": [
-{"type": "none", "per":14.7},
-{"type": "highschool", "per":60.0},
-{"type": "bachelor", "per":16.3},
-{"type": "advanced", "per":9.0}],
-"GA": [
-{"type": "none", "per":16.1},
-{"type": "highschool", "per":56.4},
-{"type": "bachelor", "per":17.6},
-{"type": "advanced", "per":9.9}],
-"HI": [
-{"type": "none", "per":9.6},
-{"type": "highschool", "per":60.8},
-{"type": "bachelor", "per":19.7},
-{"type": "advanced", "per":9.9}],
-"ID": [
-{"type": "none", "per":11.6},
-{"type": "highschool", "per":64.5},
-{"type": "bachelor", "per":16.4},
-{"type": "advanced", "per":7.5}],
-"IL": [
-{"type": "none", "per":13.6},
-{"type": "highschool", "per":55.8},
-{"type": "bachelor", "per":18.9},
-{"type": "advanced", "per":11.7}],
-"IN": [
-{"type": "none", "per":13.4},
-{"type": "highschool", "per":64.1},
-{"type": "bachelor", "per":14.4},
-{"type": "advanced", "per":8.1}],
-"IA": [
-{"type": "none", "per":9.5},
-{"type": "highschool", "per":65.4},
-{"type": "bachelor", "per":17.7},
-{"type": "advanced", "per":7.4}],
-"KS": [
-{"type": "none", "per":10.3},
-{"type": "highschool", "per":60.2},
-{"type": "bachelor", "per":19.3},
-{"type": "advanced", "per":10.2}],
-"KY": [
-{"type": "none", "per":18.3},
-{"type": "highschool", "per":60.7},
-{"type": "bachelor", "per":12.5},
-{"type": "advanced", "per":8.5}],
-"LA": [
-{"type": "none", "per":17.8},
-{"type": "highschool", "per":60.8},
-{"type": "bachelor", "per":14.5},
-{"type": "advanced", "per":6.9}],
-"ME": [
-{"type": "none", "per":9.8},
-{"type": "highschool", "per":63.3},
-{"type": "bachelor", "per":17.3},
-{"type": "advanced", "per":9.6}],
-"MD": [
-{"type": "none", "per":11.8},
-{"type": "highschool", "per":52.5},
-{"type": "bachelor", "per":19.7},
-{"type": "advanced", "per":16.0}],
-"MA": [
-{"type": "none", "per":11.0},
-{"type": "highschool", "per":50.8},
-{"type": "bachelor", "per":21.8},
-{"type": "advanced", "per":16.4}],
-"MI": [
-{"type": "none", "per":12.1},
-{"type": "highschool", "per":63.3},
-{"type": "bachelor", "per":15.2},
-{"type": "advanced", "per":9.4}],
-"MN": [
-{"type": "none", "per":8.5},
-{"type": "highschool", "per":60.0},
-{"type": "bachelor", "per":21.2},
-{"type": "advanced", "per":10.3}],
-"MS": [
-{"type": "none", "per":19.6},
-{"type": "highschool", "per":60.8},
-{"type": "bachelor", "per":12.5},
-{"type": "advanced", "per":7.1}],
-"MO": [
-{"type": "none", "per":13.2},
-{"type": "highschool", "per":61.6},
-{"type": "bachelor", "per":15.7},
-{"type": "advanced", "per":9.5}],
-"MT": [
-{"type": "none", "per":9.2},
-{"type": "highschool", "per":63.4},
-{"type": "bachelor", "per":19.1},
-{"type": "advanced", "per":8.3}],
-"NE": [
-{"type": "none", "per":10.2},
-{"type": "highschool", "per":62.4},
-{"type": "bachelor", "per":18.6},
-{"type": "advanced", "per":8.8}],
-"NV": [
-{"type": "none", "per":16.1},
-{"type": "highschool", "per":62.1},
-{"type": "bachelor", "per":14.2},
-{"type": "advanced", "per":7.6}],
-"NH": [
-{"type": "none", "per":8.7},
-{"type": "highschool", "per":59.3},
-{"type": "bachelor", "per":20.8},
-{"type": "advanced", "per":11.2}],
-"NJ": [
-{"type": "none", "per":12.6},
-{"type": "highschool", "per":52.9},
-{"type": "bachelor", "per":21.6},
-{"type": "advanced", "per":12.9}],
-"NM": [
-{"type": "none", "per":17.2},
-{"type": "highschool", "per":57.5},
-{"type": "bachelor", "per":14.9},
-{"type": "advanced", "per":10.4}],
-"NY": [
-{"type": "none", "per":15.3},
-{"type": "highschool", "per":52.3},
-{"type": "bachelor", "per":18.4},
-{"type": "advanced", "per":14.0}],
-"NC": [
-{"type": "none", "per":15.7},
-{"type": "highschool", "per":57.8},
-{"type": "bachelor", "per":17.7},
-{"type": "advanced", "per":8.8}],
-"ND": [
-{"type": "none", "per":9.9},
-{"type": "highschool", "per":64.3},
-{"type": "bachelor", "per":19.1},
-{"type": "advanced", "per":6.7}],
-"OH": [
-{"type": "none", "per":12.4},
-{"type": "highschool", "per":63.5},
-{"type": "bachelor", "per":15.3},
-{"type": "advanced", "per":8.8}],
-"OK": [
-{"type": "none", "per":14.4},
-{"type": "highschool", "per":62.9},
-{"type": "bachelor", "per":15.3},
-{"type": "advanced", "per":7.4}],
-"OR": [
-{"type": "none", "per":10.9},
-{"type": "highschool", "per":59.9},
-{"type": "bachelor", "per":18.8},
-{"type": "advanced", "per":10.4}],
-"PA": [
-{"type": "none", "per":12.1},
-{"type": "highschool", "per":61.5},
-{"type": "bachelor", "per":16.2},
-{"type": "advanced", "per":10.2}],
-"RI": [
-{"type": "none", "per":15.3},
-{"type": "highschool", "per":54.2},
-{"type": "bachelor", "per":18.8},
-{"type": "advanced", "per":11.7}],
-"SC": [
-{"type": "none", "per":16.4},
-{"type": "highschool", "per":59.3},
-{"type": "bachelor", "per":15.9},
-{"type": "advanced", "per":8.4}],
-"SD": [
-{"type": "none", "per":10.1},
-{"type": "highschool", "per":64.8},
-{"type": "bachelor", "per":17.8},
-{"type": "advanced", "per":7.3}],
-"TN": [
-{"type": "none", "per":16.9},
 {"type": "highschool", "per":60.1},
-{"type": "bachelor", "per":15.1},
-{"type": "advanced", "per":7.9}],
-"TX": [
-{"type": "none", "per":20.1},
-{"type": "highschool", "per":54.4},
-{"type": "bachelor", "per":17.0},
-{"type": "advanced", "per":8.5}],
-"UT": [
-{"type": "none", "per":9.6},
-{"type": "highschool", "per":61.9},
-{"type": "bachelor", "per":19.4},
-{"type": "advanced", "per":9.1}],
-"VT": [
-{"type": "none", "per":9.0},
-{"type": "highschool", "per":57.9},
-{"type": "bachelor", "per":19.8},
-{"type": "advanced", "per":13.3}],
-"VA": [
-{"type": "none", "per":13.4},
-{"type": "highschool", "per":52.6},
-{"type": "bachelor", "per":19.9},
-{"type": "advanced", "per":14.1}],
-"WA": [
-{"type": "none", "per":10.3},
-{"type": "highschool", "per":58.7},
-{"type": "bachelor", "per":19.9},
-{"type": "advanced", "per":11.1}],
-"WV": [
-{"type": "none", "per":17.2},
-{"type": "highschool", "per":65.5},
-{"type": "bachelor", "per":10.6},
-{"type": "advanced", "per":6.7}],
-"WI": [
-{"type": "none", "per":10.2},
-{"type": "highschool", "per":64.1},
+{"type": "none", "per":17.9}],
+"AK": [
+{"type": "advanced", "per":9.0},
+{"type": "bachelor", "per":17.6},
+{"type": "highschool", "per":64.8},
+{"type": "none", "per":8.6}],
+"AZ": [
+{"type": "advanced", "per":9.3},
+{"type": "bachelor", "per":16.3},
+{"type": "highschool", "per":58.6},
+{"type": "none", "per":15.8}],
+"AR": [
+{"type": "advanced", "per":6.1},
+{"type": "bachelor", "per":12.8},
+{"type": "highschool", "per":63.5},
+{"type": "none", "per":17.6}],
+"CA": [
+{"type": "advanced", "per":10.7},
+{"type": "bachelor", "per":19.2},
+{"type": "highschool", "per":50.7},
+{"type": "none", "per":19.4}],
+"CO": [
+{"type": "advanced", "per":12.7},
+{"type": "bachelor", "per":23.2},
+{"type": "highschool", "per":53.4},
+{"type": "none", "per":10.7}],
+"CT": [
+{"type": "advanced", "per":15.5},
+{"type": "bachelor", "per":20.1},
+{"type": "highschool", "per":53.0},
+{"type": "none", "per":11.4}],
+"DE": [
+{"type": "advanced", "per":11.4},
 {"type": "bachelor", "per":17.3},
-{"type": "advanced", "per":8.4}],
-"WY": [
-{"type": "none", "per":8.2},
-{"type": "highschool", "per":68.0},
+{"type": "highschool", "per":58.7},
+{"type": "none", "per":12.6}],
+"DC": [
+{"type": "advanced", "per":28.0},
+{"type": "bachelor", "per":20.5},
+{"type": "highschool", "per":38.6},
+{"type": "none", "per":12.9}],
+"FL": [
+{"type": "advanced", "per":9.0},
+{"type": "bachelor", "per":16.3},
+{"type": "highschool", "per":60.0},
+{"type": "none", "per":14.7}],
+"GA": [
+{"type": "advanced", "per":9.9},
+{"type": "bachelor", "per":17.6},
+{"type": "highschool", "per":56.4},
+{"type": "none", "per":16.1}],
+"HI": [
+{"type": "advanced", "per":9.9},
+{"type": "bachelor", "per":19.7},
+{"type": "highschool", "per":60.8},
+{"type": "none", "per":9.6}],
+"ID": [
+{"type": "advanced", "per":7.5},
+{"type": "bachelor", "per":16.4},
+{"type": "highschool", "per":64.5},
+{"type": "none", "per":11.6}],
+"IL": [
+{"type": "advanced", "per":11.7},
+{"type": "bachelor", "per":18.9},
+{"type": "highschool", "per":55.8},
+{"type": "none", "per":13.6}],
+"IN": [
+{"type": "advanced", "per":8.1},
+{"type": "bachelor", "per":14.4},
+{"type": "highschool", "per":64.1},
+{"type": "none", "per":13.4}],
+"IA": [
+{"type": "advanced", "per":7.4},
+{"type": "bachelor", "per":17.7},
+{"type": "highschool", "per":65.4},
+{"type": "none", "per":9.5}],
+"KS": [
+{"type": "advanced", "per":10.2},
+{"type": "bachelor", "per":19.3},
+{"type": "highschool", "per":60.2},
+{"type": "none", "per":10.3}],
+"KY": [
+{"type": "advanced", "per":8.5},
+{"type": "bachelor", "per":12.5},
+{"type": "highschool", "per":60.7},
+{"type": "none", "per":18.3}],
+"LA": [
+{"type": "advanced", "per":6.9},
+{"type": "bachelor", "per":14.5},
+{"type": "highschool", "per":60.8},
+{"type": "none", "per":17.8}],
+"ME": [
+{"type": "advanced", "per":9.6},
+{"type": "bachelor", "per":17.3},
+{"type": "highschool", "per":63.3},
+{"type": "none", "per":9.8}],
+"MD": [
+{"type": "advanced", "per":16.0},
+{"type": "bachelor", "per":19.7},
+{"type": "highschool", "per":52.5},
+{"type": "none", "per":11.8}],
+"MA": [
+{"type": "advanced", "per":16.4},
+{"type": "bachelor", "per":21.8},
+{"type": "highschool", "per":50.8},
+{"type": "none", "per":11.0}],
+"MI": [
+{"type": "advanced", "per":9.4},
+{"type": "bachelor", "per":15.2},
+{"type": "highschool", "per":63.3},
+{"type": "none", "per":12.1}],
+"MN": [
+{"type": "advanced", "per":10.3},
+{"type": "bachelor", "per":21.2},
+{"type": "highschool", "per":60.0},
+{"type": "none", "per":8.5}],
+"MS": [
+{"type": "advanced", "per":7.1},
+{"type": "bachelor", "per":12.5},
+{"type": "highschool", "per":60.8},
+{"type": "none", "per":19.6}],
+"MO": [
+{"type": "advanced", "per":9.5},
+{"type": "bachelor", "per":15.7},
+{"type": "highschool", "per":61.6},
+{"type": "none", "per":13.2}],
+"MT": [
+{"type": "advanced", "per":8.3},
+{"type": "bachelor", "per":19.1},
+{"type": "highschool", "per":63.4},
+{"type": "none", "per":9.2}],
+"NE": [
+{"type": "advanced", "per":8.8},
+{"type": "bachelor", "per":18.6},
+{"type": "highschool", "per":62.4},
+{"type": "none", "per":10.2}],
+"NV": [
+{"type": "advanced", "per":7.6},
+{"type": "bachelor", "per":14.2},
+{"type": "highschool", "per":62.1},
+{"type": "none", "per":16.1}],
+"NH": [
+{"type": "advanced", "per":11.2},
+{"type": "bachelor", "per":20.8},
+{"type": "highschool", "per":59.3},
+{"type": "none", "per":8.7}],
+"NJ": [
+{"type": "advanced", "per":12.9},
+{"type": "bachelor", "per":21.6},
+{"type": "highschool", "per":52.9},
+{"type": "none", "per":12.6}],
+"NM": [
+{"type": "advanced", "per":10.4},
+{"type": "bachelor", "per":14.9},
+{"type": "highschool", "per":57.5},
+{"type": "none", "per":17.2}],
+"NY": [
+{"type": "advanced", "per":14.0},
+{"type": "bachelor", "per":18.4},
+{"type": "highschool", "per":52.3},
+{"type": "none", "per":15.3}],
+"NC": [
+{"type": "advanced", "per":8.8},
+{"type": "bachelor", "per":17.7},
+{"type": "highschool", "per":57.8},
+{"type": "none", "per":15.7}],
+"ND": [
+{"type": "advanced", "per":6.7},
+{"type": "bachelor", "per":19.1},
+{"type": "highschool", "per":64.3},
+{"type": "none", "per":9.9}],
+"OH": [
+{"type": "advanced", "per":8.8},
+{"type": "bachelor", "per":15.3},
+{"type": "highschool", "per":63.5},
+{"type": "none", "per":12.4}],
+"OK": [
+{"type": "advanced", "per":7.4},
+{"type": "bachelor", "per":15.3},
+{"type": "highschool", "per":62.9},
+{"type": "none", "per":14.4}],
+"OR": [
+{"type": "advanced", "per":10.4},
+{"type": "bachelor", "per":18.8},
+{"type": "highschool", "per":59.9},
+{"type": "none", "per":10.9}],
+"PA": [
+{"type": "advanced", "per":10.2},
+{"type": "bachelor", "per":16.2},
+{"type": "highschool", "per":61.5},
+{"type": "none", "per":12.1}],
+"RI": [
+{"type": "advanced", "per":11.7},
+{"type": "bachelor", "per":18.8},
+{"type": "highschool", "per":54.2},
+{"type": "none", "per":15.3}],
+"SC": [
+{"type": "advanced", "per":8.4},
 {"type": "bachelor", "per":15.9},
-{"type": "advanced", "per":7.9}]
+{"type": "highschool", "per":59.3},
+{"type": "none", "per":16.4}],
+"SD": [
+{"type": "advanced", "per":7.3},
+{"type": "bachelor", "per":17.8},
+{"type": "highschool", "per":64.8},
+{"type": "none", "per":10.1}],
+"TN": [
+{"type": "advanced", "per":7.9},
+{"type": "bachelor", "per":15.1},
+{"type": "highschool", "per":60.1},
+{"type": "none", "per":16.9}],
+"TX": [
+{"type": "advanced", "per":8.5},
+{"type": "bachelor", "per":17.0},
+{"type": "highschool", "per":54.4},
+{"type": "none", "per":20.1}],
+"UT": [
+{"type": "advanced", "per":9.1},
+{"type": "bachelor", "per":19.4},
+{"type": "highschool", "per":61.9},
+{"type": "none", "per":9.6}],
+"VT": [
+{"type": "advanced", "per":13.3},
+{"type": "bachelor", "per":19.8},
+{"type": "highschool", "per":57.9},
+{"type": "none", "per":9.0}],
+"VA": [
+{"type": "advanced", "per":14.1},
+{"type": "bachelor", "per":19.9},
+{"type": "highschool", "per":52.6},
+{"type": "none", "per":13.4}],
+"WA": [
+{"type": "advanced", "per":11.1},
+{"type": "bachelor", "per":19.9},
+{"type": "highschool", "per":58.7},
+{"type": "none", "per":10.3}],
+"WV": [
+{"type": "advanced", "per":6.7},
+{"type": "bachelor", "per":10.6},
+{"type": "highschool", "per":65.5},
+{"type": "none", "per":17.2}],
+"WI": [
+{"type": "advanced", "per":8.4},
+{"type": "bachelor", "per":17.3},
+{"type": "highschool", "per":64.1},
+{"type": "none", "per":10.2}],
+"WY": [
+{"type": "advanced", "per":7.9},
+{"type": "bachelor", "per":15.9},
+{"type": "highschool", "per":68.0},
+{"type": "none", "per":8.2}]
 
 }}

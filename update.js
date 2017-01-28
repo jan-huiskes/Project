@@ -27,7 +27,12 @@ d3.json("data/data.json", function(error, data) {
     if (clickedstate != null){
       m[clickedstate] = USmap.options.fills[data.data[clickedstate].fillKey]
     };
-    m[id] = "#F5FF2E";
+    if (data.data[id].fillKey == 'republican') {
+      m[id] = "#ff4d4d";
+    }
+    else{
+      m[id] = "#0066ff";
+    }
     USmap.updateChoropleth(m);
     clickedstate = id
 
@@ -134,6 +139,7 @@ d3.json("data/dataedu.json", function(error, data) {
       .on('mouseover', tip2.show)
       .on('mouseout', tip2.hide)
       .style("fill", function(d) { return color(d.data.type); })
+      .style("stroke-width", 2)
       .transition()
       .duration(function(d, i) {
         return i * 400;

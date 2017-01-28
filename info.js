@@ -7,7 +7,7 @@
 var colors = ['#B01733',
 '#1441C7',
 '#FFF700',
-'#02AD05',
+'#A9A9A9',
 '#E0E084'
 ]
 
@@ -99,7 +99,9 @@ chartinfo.selectAll(".barinfo")
     .attr("class", "barinfo")
     .on('mouseover', tip.show)
     .on('mouseout', tip.hide)
-    .style("fill", function(d) { return d.col; });
+    .style("fill", function(d) { return d.col; })
+    .attr("stroke", function(d) { return d.col; })
+    .style("stroke-width", 2);
 
 // Titels
 svg3.append("text")
@@ -147,7 +149,9 @@ svg3.append("text")
       .attr("class", "barinfo")
       .on('mouseover', tip.show)
       .on('mouseout', tip.hide)
-      .style("fill", function(d) { return d.col; });
+      .style("fill", function(d) { return d.col; })
+      .attr("stroke", function(d) { return d.col; })
+      .style("stroke-width", 2);
 
   svg4.append("text")
       .attr("class", 'axTitle')

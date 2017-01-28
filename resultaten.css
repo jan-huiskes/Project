@@ -7,20 +7,23 @@ De CSS van de visualisaties en alles wat daarbij komt (zoals legenda's)
 /*legenda's*/
 
 /* positionering */
-.legend { list-style: none; width: 50%; text-align: left;}
-.legend li { float: none; }
-.legend span { border: 1px solid #ccc; float: left; width: 12px; height: 12px }
+.legend { list-style: none; width: 100%; text-align: left;}
+.legend li { float: center; padding-right: 200px;}
+.legend span { border: 1px solid #ccc; float: left; width: 18px; height: 18px }
 /* kleuren */
 .legend .republican { background-color: #B01733; }
 .legend .democratic { background-color: #1441C7; }
 .legend .libertarian { background-color: #FFF700; }
-.legend .other { background-color: #02AD05; }
+.legend .other { background-color: #A9A9A9; }
 
 
 .legend2 {
   font-size: 12px;
 }
 
+#bar2{
+  padding-top: 100px;
+}
 
 #legend{
   padding-bottom: 50px;
@@ -31,7 +34,6 @@ De CSS van de visualisaties en alles wat daarbij komt (zoals legenda's)
 #container2{
   height: 700px;
 }
-
 
 
 /* Titel en tekst style */
@@ -54,9 +56,21 @@ De CSS van de visualisaties en alles wat daarbij komt (zoals legenda's)
   font-weight: bold;
 }
 
-/*hover scatterplot*/
+/* Hover */
 .dot:hover{
-  fill: orange;
+  stroke: black
+}
+
+.bar:hover{
+  stroke: orange
+}
+
+.barinfo:hover{
+  stroke: orange
+}
+
+path:hover{
+  stroke: orange
 }
 
 /* Pop up */

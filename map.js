@@ -15,6 +15,8 @@ d3.json("data/data.json", function(error, data) {
 USmap = new Datamap({element: document.getElementById('container2'),
 scope: 'usa',
 geographyConfig: {
+  borderColor: '#A9A9A9',
+      highlightBorderColor: '#bada55',
   // Pop up als men over een land hovert
  popupTemplate: function(geography, data) {
 
@@ -22,6 +24,10 @@ string = '<div class="hoverinfo">'
 string += '<strong>' + geography.properties.name + '</strong>'
 string += '</div> '
    return string },
+highlightFillColor: function(datamap){
+  return USmap.options.fills[datamap.fillKey]
+},
+    highlightBorderWidth: 3
 },
 
 fills: {
@@ -49,7 +55,6 @@ USmap.labels({'customLabelText': data1.data});
 
 });
 });
-
 
 
 // Dropdown menu

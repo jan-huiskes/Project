@@ -71,7 +71,9 @@ chart.selectAll(".bar")
     .attr("class", "bar")
     .on('mouseover', tip.show)
     .on('mouseout', tip.hide)
-    .style("fill", function(d) { return d.col; });
+    .style("fill", function(d) { return d.col; })
+    .attr("stroke", function(d) { return d.col; })
+    .style("stroke-width", 2);
 
 svg.append("text")
     .attr("class", 'axTitle')
