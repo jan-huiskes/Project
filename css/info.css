@@ -7,7 +7,7 @@ Style van het informatie gedeelte van de pagina. Alle tekstvakken en buttons daa
 
 /* Buttons */
 #page-info a:link, a:visited {
-    background-color: #4A9EFF;
+    background-color: #1e7b1e;
     color: white;
     padding: 14px 25px;
     text-align: center;

@@ -42,7 +42,7 @@ body{
 #page-info {
   height: 800px;
 	color: #fff;
-  background-image: url("image/flag2.jpg");
+  background-image: url("../image/flag2.jpg");
   background-size: cover;
 }
 
@@ -57,19 +57,19 @@ body{
 }
 
 #debat{
-  background-image: url("image/debat.jpg");
+  background-image: url("../image/debat.jpg");
 }
 
 #debat2{
-  background-image: url("image/trump2.jpg");
+  background-image: url("../image/trump2.jpg");
 }
 
 #debat3{
-  background-image: url("image/clinton2.jpg");
+  background-image: url("../image/clinton2.jpg");
 }
 
 #debat4{
-  background-image: url("image/debat2.jpg");
+  background-image: url("../image/debat2.jpg");
 }
 
 h1{
@@ -82,7 +82,7 @@ h1{
 
 #bronnen{
   text-align: left;
-  background-color: #4A9EFF;
+  background-color: #1e7b1e;
   color: #fff;
 }
 
@@ -99,7 +99,7 @@ h5 {
 
 .navbar{
   height: 50px;
-  background-color: #4A9EFF;
+  background-color: #1e7b1e;
 
 }
 
@@ -121,10 +121,10 @@ li {
 }
 
 li a {
-    display: block;
+    display: inline-block;
     color: white;
     text-align: center;
-    padding: 15px 100px;
+    padding: 15px 75px;
     text-decoration: none;
 }
 
@@ -137,7 +137,7 @@ li a {
 }
 
 li a:hover {
-    background-color: #0776F5;
+    background-color: #145214;
     color: white;
 }
 

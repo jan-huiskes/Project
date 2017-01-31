@@ -16,7 +16,7 @@ USmap = new Datamap({element: document.getElementById('container2'),
 scope: 'usa',
 geographyConfig: {
   borderColor: '#A9A9A9',
-      highlightBorderColor: '#bada55',
+      highlightBorderColor: 'orange',
   // Pop up als men over een land hovert
  popupTemplate: function(geography, data) {
 
@@ -46,7 +46,7 @@ done: function(datamap) {
        datamap.svg.selectAll('.datamaps-subunit').on('click', function( geography) {
            updateData(geography.id)
 
-       });
+       })
     }
 })
 

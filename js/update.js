@@ -28,10 +28,10 @@ d3.json("data/data.json", function(error, data) {
       m[clickedstate] = USmap.options.fills[data.data[clickedstate].fillKey]
     };
     if (data.data[id].fillKey == 'republican') {
-      m[id] = "#ff4d4d";
+      m[id] = "#ff6666";
     }
     else{
-      m[id] = "#0066ff";
+      m[id] = "#6699ff";
     }
     USmap.updateChoropleth(m);
     clickedstate = id
@@ -67,8 +67,8 @@ d3.json("data/data.json", function(error, data) {
      svg.append("text")
         .attr("class", 'Title')
         .attr("text-anchor", "middle")
-        .attr("transform", "translate("+ (width / 2.2) +","+ padding / 5 +")")
-        .text('Percentage (in %) stemmen gewonnen in ' + name + ' (' + kiesman + ' kiesmannen)');
+        .attr("transform", "translate("+ (width / 2.2) +","+ padding / 8 +")")
+        .text('Verdeling (in %) van stemmen in ' + name + ' (' + kiesman + ' kiesmannen)');
 
   }
 
@@ -102,13 +102,13 @@ d3.json("data/data.json", function(error, data) {
         .attr("class", 'Title')
         .attr("text-anchor", "middle")
         .attr("transform", "translate("+ 0 +","+ -185 +")")
-        .text("Percentage (in %) van opleidingiveau's in Amerika");
+        .text("Verdeling (in %) van opleidingiveau's in Amerika");
 
      svg.append("text")
         .attr("class", 'Title')
         .attr("text-anchor", "middle")
-        .attr("transform", "translate("+ (width / 2.2) +","+ padding / 5 +")")
-        .text('Percentage (in %) stemmen gewonnen in Amerika (' + kiesman + ' kiesmannen)');
+        .attr("transform", "translate("+ (width / 2.2) +","+ padding / 8 +")")
+        .text('Verdeling (in %) van stemmen in Amerika (' + kiesman + ' kiesmannen)');
 
   };
 

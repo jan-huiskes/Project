@@ -7,9 +7,9 @@ De CSS van de visualisaties en alles wat daarbij komt (zoals legenda's)
 /*legenda's*/
 
 /* positionering */
-.legend { list-style: none; width: 100%; text-align: left;}
-.legend li { float: center; padding-right: 200px;}
-.legend span { border: 1px solid #ccc; float: left; width: 18px; height: 18px }
+.legend { list-style: none; width: 100%; text-align: center;}
+.legend li { float: none; padding: 0px 100px; display: inline-block;}
+.legend span { border: 1px solid #ccc; float: left; width: 18px; height: 18px; margin-right: 5px}
 /* kleuren */
 .legend .republican { background-color: #B01733; }
 .legend .democratic { background-color: #1441C7; }
@@ -35,6 +35,14 @@ De CSS van de visualisaties en alles wat daarbij komt (zoals legenda's)
   height: 700px;
 }
 
+#title-kaart{
+  fill: black;
+  font-size: 14px;
+  font-weight: bold;
+  padding-top: 40px;
+  padding-left: 60px;
+  float:left;
+}
 
 /* Titel en tekst style */
 
@@ -58,7 +66,7 @@ De CSS van de visualisaties en alles wat daarbij komt (zoals legenda's)
 
 /* Hover */
 .dot:hover{
-  stroke: black
+  stroke: orange
 }
 
 .bar:hover{

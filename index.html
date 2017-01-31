@@ -3,19 +3,19 @@
 <!DOCTYPE html> <meta charset="utf-8">
 <html>
     <head>
-       <title>Project</title>
-       <script src="d3.js"></script>
-       <!-- Latest compiled and minified CSS -->
-       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+     <title>Amerikaanse verkiezingen</title>
+     <script src="d3/d3.js"></script>
 
-       <link rel="stylesheet" type="text/css" href="resultaten.css"/>
-       <link rel="stylesheet" type="text/css" href="layout.css"/>
-       <link rel="stylesheet" type="text/css" href="info.css"/>
-       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+     <link rel="stylesheet" type="text/css" href="css/resultaten.css"/>
+     <link rel="stylesheet" type="text/css" href="css/layout.css"/>
+     <link rel="stylesheet" type="text/css" href="css/info.css"/>
+     <link rel="shortcut icon" type="image/png" href="/image/fav.png">
 
-        <script src="d3-topojson.js"></script>
-        <script src="datamaps.usa.min.js"></script>
-        <script src="d3-tooltip.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script src="d3/d3-topojson.js"></script>
+     <script src="d3/datamaps.usa.min.js"></script>
+     <script src="d3/d3-tooltip.js"></script>
     </head>
     <body>
       <div class="container-fluid" id="nav">
@@ -24,10 +24,10 @@
               <li> <a id='link-flag' href="#page-info"><img src="image/flag.png" id="flag" ></a></li>
             </div>
             <ul id="nav">
-              <li><a href="#info">Het Amerikaans kiesstelsel</a></li>
+              <li><a href="#info">Het Amerikaanse kiesstelsel</a></li>
               <li><a href="#resultaten">Verkiezingsresultaten 2016</a></li>
-              <li><a href="#video">Filmpje</a></li>
-              <li><a href="#debat3" id='link-bron'>Bronnen</a></li>
+              <li><a href="#video">Film</a></li>
+              <li><a href="#debat3">Bronnen</a></li>
             </ul>
         </nav>
       </div>
@@ -48,8 +48,8 @@
             <p>
               Op 8 november 2016 werd er in Amerika gestemd voor een nieuwe president. De strijd ging
               dit keer tussen Hilary Clinton en Donald Trump. Clinton had al veel ervaring in de politieke wereld en
-              Trump was een nieuwkomer uit de zakenwereld. Er zijn ook andere partijen en kandidaten, maar die hebben zo weinig populariteit dat
-              ze er niet echt toe doen.
+              Trump was een nieuwkomer uit de zakenwereld. Er waren ook andere partijen en kandidaten, maar die hadden zo weinig populariteit dat
+              ze er niet echt toe deden.
             </p>
             <div class="figure">
               <p><img src="image/clinton.jpg" class='img-circle' width='400px' height='300px'>
@@ -95,7 +95,7 @@
               kiesmannen wint, wint de verkiezingen. Elke staat krijgt minimaal 3 kiesmannen toegewezen, waarna de staten
               extra kiesmannen krijgen op basis van het aantal inwoners.
               Zo heeft Alabama 3 kiesmannen met 1 miljoen inwoners en California 55 met 37 miljoen inwoners.
-              Het aantal kiesmannen per staat worden iedere 10 jaar opnieuw verdeeld. De laatste keer dat de kiesmannen zijn verdeeld
+              Het aantal kiesmannen per staat worden iedere 10 jaar opnieuw verdeeld. De laatste keer dat de kiesmannen waren verdeeld
               was in 2010.
             </p>
             <div class="figure">
@@ -115,7 +115,7 @@
             <p>
               Het kiesmannensysteem zou eerlijker gemaakt kunnen worden door het
               ‘winner takes it all’ systeem te vervangen door een systeem waar de presidentskanditaat hetzelfde
-              percentage aan kiesmannen krijgt als percentage stemmen die diegene wint.
+              percentage aan kiesmannen krijgt als het percentage stemmen die diegene wint.
             </p>
             <div class="figure">
               <p><img src="image/vraagteken.jpg" class ='img-circle' width='300px' height='300px'>
@@ -127,9 +127,9 @@
           <div class ='col-md-8 col-md-offset-2' >
             <h3>De globale uitslag van de verkiezingen in 2016</h3>
             <p>
-              Clinton heeft 48.1% van alle stemmen gekregen en Trump kreeg 46.5% van alle stemmen. De overige 4.4%
+              Clinton heeft 48.1% van alle stemmen gekregen en Trump 46.5%. De overige 4.4%
               ging naar overige presidentskandidaten. Echter, Trump heeft
-              56.9% van de kiesmannen gewonnen en Clinton heeft 43.1% van de kiesmannen gewonnen. Daarom is Trump dus de nieuwe president van Amerika.
+              56.9% van de kiesmannen gewonnen en Clinton 43.1%. Daarom is Trump dus de nieuwe president van Amerika.
             </p>
           </div>
         </div>
@@ -144,12 +144,12 @@
         </div>
       </div>
 
-      <script src="info.js"></script>
+      <script src="js/info.js"></script>
 
       <div class='container-fluid' id='resultaten'>
         <h1> Verkiezingresultaten 2016</h1>
         <div class = 'row' id='legend'>
-          <div class="col-md-10">
+          <div class="col-md-10 col-md-offset-1">
             <fieldset class="legend">
               <legend>Politieke partijen</legend>
               <ul class="legend">
@@ -167,6 +167,7 @@
           <div class="col-md-8">
             <button class="btn btn-primary" type="reset" value="Reset" onclick="updateData('US')">Reset</button>
           </div>
+          <p id = 'title-kaart'> Kaart van Amerika met de staten ingekleurd op basis van de winst van de politieke partij </p>
         </div>
         <div class = 'row'>
           <div class="col-md-7">
@@ -197,7 +198,7 @@
             <h4>Kaart</h4>
             <p>
               De kaart van Amerika is gekleurd op basis van de winst van de partij/kandidaat (rood voor republikeinen (Trump) en blauw voor
-              de democraten (Hillary)). Op de kaart kan je hoveren en dan wordt de naam van de staat gegeven en verder heeft de kaart labels
+              de democraten (Clinton)). Op de kaart kan je hoveren en dan wordt de naam van de staat gegeven en verder heeft de kaart labels
               die het aantal kiesmannen van een staat weergegeven.
             </p>
             <h4>Bar- en donutchart</h4>
@@ -215,8 +216,8 @@
             </p>
             <h4>Gelinkt</h4>
             <p>
-              De visualisaties zijn gelinkt met elkaar. Door op de kaart, op de scatterplot of uit het dropdown-menu
-              een staat te kiezen wordt de staat op de kaart gekleurd, de bar- en donutchart aangepast op de gegevens van die
+              De visualisaties zijn gelinkt met elkaar. Door op de kaart, de scatterplot of het dropdown-menu
+              een staat te kiezen wordt de staat op de kaart lichter gekleurd, de bar- en donutchart aangepast op de gegevens van die
               staat en in de scatterplot vervagen de stippen behalve de stip voor die staat. Zo is het mogelijk om specifiek de uitslag
               en opleidingsniveau's te zien in een staat. Door de reset button wordt alles weer teruggezet naar het begin.
             </p>
@@ -228,7 +229,7 @@
       </div>
 
       <div class='container-fluid' id='video'>
-        <h1> Filmpje </h1>
+        <h1> Film </h1>
         <div class='row'>
           <iframe  src="https://www.youtube.com/v/9VEIODJK-1M">
           </iframe>
@@ -244,12 +245,12 @@
         <div class='row'><h5>"Table 233. Educational Attainment by State". United States Census Bureau. 2011. Archived from the original on February 21, 2012. Retrieved 2014-05-23.</div>
       </div>
 
-      <script src="map.js"></script>
-      <script src="bar.js"></script>
-      <script src="scatter.js"></script>
-      <script src="donut.js"></script>
-      <script src="update.js"></script>
-      <script src="scroll.js"></script>
+      <script src="js/map.js"></script>
+      <script src="js/bar.js"></script>
+      <script src="js/scatter.js"></script>
+      <script src="js/donut.js"></script>
+      <script src="js/update.js"></script>
+      <script src="js/scroll.js"></script>
 
     </body>
 </html>

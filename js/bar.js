@@ -90,7 +90,7 @@ svg.append("text")
 svg.append("text")
     .attr("class", 'Title')
     .attr("text-anchor", "middle")
-    .attr("transform", "translate("+ (width / 2.2) +","+ padding / 5 +")")
+    .attr("transform", "translate("+ (width / 2.2) +","+ padding / 8 +")")
     .text("Verdeling (in %) van stemmen in Amerika (538 kiesmannen)");
 
 });

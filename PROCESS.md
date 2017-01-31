@@ -94,3 +94,22 @@ Omdat ik maandag niet kan werken, is dit wat ik ongeveer had gedaan:
 * Alle visualisaties hebben hover en wel zo dat alleen de border verandert van een element maar de kleur nog wel goed zichtbaar is want die is belangrijk voor het aangeven van de winnaar.
 
 * To do: ik heb nu de kaart zo verandert dat als je klikt de kleur rood of blauw van de staat lichter wordt en niet meer geel, want hier is ook de kleur belangrijk. Ik wil nog kijken of ik alleen de border kan aanpassen
+
+## Day 16 31-1-2017
+
+* Kaart border aanpassen of opacity kostte heel veel moeite en werkte niet dus ik hou hoe ik het nu heb. Dit is echter ook heel mooi en de kleuren zijn nog wat beter gekozen om te highlighten.
+
+* Kaart een titel gegeven
+
+* Favicon voor de site
+
+* Tekst nagekeken
+
+* Alle files in goeie map
+
+* Legenda partijen in het midden gezet
+
+## to do:
+* navbar
+
+* verslag
