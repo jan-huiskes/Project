@@ -2,34 +2,20 @@
 
 ## Jan Huiskes 107409292
 
-### Goals:
+De pagina geeft een gedetailleerde weergave van de verkiezingen van 2016 en legt een brug tussen stemgedrag en opleidingsniveau. De gebruiker kan zo zien wat per staat de uitslag is geweest, hoe de verdeling van opleidingsniveau's specifiek in een staat is en of er een verband tussen opleidingsniveau en stemgedrag is. De data is eerst ingesteld op amerika in het geheel. De barchart geeft de resultaten weer van de stemmingen in een staat of heel Amerika. De donutchart geeft de verdeling van opleidingsniveau's weer in een staat of heel Amerika. De scatterplot geeft de staten weer met op de x-as het percentage hoger opgeleiden (bachelor of hoger) en op de y-as het percentage stemmen waarmee de kandidaat de staat heeft gewonnen. De kleur representeert de winnaar en de grootte het aantal kiesmannen. Door te klikken op een punt in de scatterplot, een staat op de kaart of een staat uit het dropdown menu kan men alles aanpassen voor die staat. De staat wordt op de kaart lichter gekleurd, de bar- en donutchart worden aangepast op de gegevens van die staat en in de scatterplot vervagen de stippen behalve de stip voor die staat.
 
-* what problem will be solved for the user
+Screenshots:
 
-* what features will be available to solve the problem
+![](doc/scrn1.png)
 
-* a visual sketch of what the application will look like for the user; if you envision the application to have multiple screens, sketch these all out; not in full detail though
+![](doc/scrn2.png)
 
-* what data sets and data sources will you need, how you will get the data into the right form for your app
+![](doc/scrn3.png)
 
-* what separate parts of the application can be defined (decomposing the problem) and how these should work together
-
-* what external components (APIs) you probably need to make certain features possible
-
-* technical problems or limitations that could arise during development and what possibilities you have to overcome these
-
-* a review of similar applications or visualizations in terms of features and technical aspects (what do they offer? how have they implemented it?)
-
-### Proposal:
-
-De gebruiker kan informatie en data over de Amerikaanse verkiezingen van 2016 zien. De pagina zal uit twee delen bestaan. Het eerste deel is informatie over de amerikaanse verkiezingen, hoe het werkt, wie gewonnen heeft, wat nadelen kunnen zijn, etc. Dit leert de gebruiker alles over het politieke stelsel van Amerika en dat is ook het doel van de site met behulp van de uitslagen van de recente verkiezingen. Het tweede deel zal een kaart van Amerika zijn ingekleurd op basis van de uitslagen. De gebruiker kan door een knop wisselen met een kaart van Amerika waar de staten een andere grootte hebben op basis van het aantal kiesmannen. Door op een staat te klikken van 1 van de kaarten is er een barchart met de uitslagen van die staat voor de kandidaten. Door weer op de barchart te klikken, kan men weer de andere kaart verkrijgen. Dit zijn 3 linked views. De interactiviet zal bestaan uit een dropbox menu om een staat te kiezen, mouse over pop-ups en een button om van kaart te wisselen. Hiervoor is een dataset nodig over elke staat en hun uitslag in JSON vorm, dit zal ik nog moeten converteren. De databases die ik nodig zal hebben zijn datamaps en andere D3 libraries (voor dingen zoals pop-ups).
-
-De problemen die kunnen ontstaan is het vinden van een goede dataset, desnoods zal ik de verkiezingen van 2012 doen. Ook de kaart op basis van kiesmannen zal waarschijnlijk lastig worden om te maken. Op de site van Datamaps staan al kaart implementaties en deze zal ik zeker gebruiken om het te maken en dingen aan te passen.
-
-Schets:
-![](doc/schets.jpg)
-
-Bronnen:
-* https://datamaps.github.io/
-* http://www.presidency.ucsb.edu/showelection.php?year=2016
-*  "Table 233. Educational Attainment by State". United States Census Bureau. 2011. Archived from the original on February 21, 2012. Retrieved 2014-05-23.
+Alle files die ik heb gebruikt maar niet zelf heb gemaakt zitten in de d3 map of online in de html gezet:
+* D3:
+  * datamaps
+  * d3 tool tip
+  * d3 topojson
+* Bootstrap
+* jQuery

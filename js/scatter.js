@@ -1,6 +1,8 @@
 // Jan Huiskes
 // 10740929
 // JS Bestand voor de scatterplot
+// bron: http://bl.ocks.org/weiglemc/6185069 
+
 
 // Globale variabele voor scatterplot zodat deze upgedate kan worden
 var scatter;

@@ -2,6 +2,7 @@
 // 10740929
 // JS bestand voor de barcharts in  het informatie gedeeelte van de webpagina. Dit zijn twee barcharts, een over de totale stemmen
 // en de ander over de kiesmannen
+// bron: https://bost.ocks.org/mike/bar/3/
 
 // Algemene kleuren voor de visualisaties
 var colors = ['#B01733',

@@ -1,6 +1,7 @@
 // Jan Huiskes
 // 10740929
 // JS bestand voor de donut chart
+// bron: http://zeroviscosity.com/d3-js-step-by-step/step-2-a-basic-donut-chart
 
 // Globale variabele voor de donut chart
 var path;
@@ -12,7 +13,9 @@ var widthcirc = 400 - margin.left - margin.right;
 var radius = Math.min(widthcirc, heightcirc) / 2;
 
 
-var color = d3.scale.category20b()
+var color = d3.scale.category20c()
+color = d3.scale.ordinal()
+            .range(color.range().slice(8,12))
 
 // innerRadius een waarde geven boven 0 maakt een donut chart ipv pie
 var arc = d3.svg.arc()

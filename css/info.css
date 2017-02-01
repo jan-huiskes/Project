@@ -18,7 +18,6 @@ Style van het informatie gedeelte van de pagina. Alle tekstvakken en buttons daa
 /* Titels en onderschriften */
 
 .Titleinfo {
-  fill: black;
   font: 25px;
   font-weight: bold;
 }

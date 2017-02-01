@@ -1,5 +1,6 @@
 // Jan Huiskes
 // 10740929
+// bron: http://stackoverflow.com/questions/7717527/smooth-scrolling-when-clicking-an-anchor-link
 
 // smooth switching between sections
 $(document).on('click', 'a', function(event){

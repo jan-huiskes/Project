@@ -1,7 +1,7 @@
 // Jan Huiskes
 // 10740929
 // JS bestand voor de map en dropdown menu
-
+// bron: https://github.com/markmarkoh/datamaps/blob/master/README.md#using-custom-maps
 
 var USmap;
 var clickedstate;
@@ -16,7 +16,7 @@ USmap = new Datamap({element: document.getElementById('container2'),
 scope: 'usa',
 geographyConfig: {
   borderColor: '#A9A9A9',
-      highlightBorderColor: 'orange',
+      highlightBorderColor: 'black',
   // Pop up als men over een land hovert
  popupTemplate: function(geography, data) {
 
@@ -27,7 +27,7 @@ string += '</div> '
 highlightFillColor: function(datamap){
   return USmap.options.fills[datamap.fillKey]
 },
-    highlightBorderWidth: 3
+    highlightBorderWidth: 1
 },
 
 fills: {
@@ -65,7 +65,7 @@ d3.json("data/datadrop.json", function(error, data) {
                       .append("select")
                       .on("change", function() {updateData(this.value)})
                       .attr("name", "country-list")
-                      .attr("class", "btn btn-primary dropdown-toggle")
+                      .attr("class", "btn btn-success dropdown-toggle")
 
   // Opties op basis van de data
   options = dropDown.selectAll("option")

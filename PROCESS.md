@@ -63,6 +63,8 @@ waarin je high-school, bachelor of advanced grads.
 
 * Bugs eruit halen: blauw worden bronnen optie. Nog mooier met transitions maken
 
+* Input Presentatie: Maak scatterplot met percentage hoger opgeleid en stemgedrag
+
 ## Day 12 23-1-2017
 * Mooie transitions van de donut char en bar chart gemaakt als je klikt of iets verandert.
 
@@ -109,7 +111,16 @@ Omdat ik maandag niet kan werken, is dit wat ik ongeveer had gedaan:
 
 * Legenda partijen in het midden gezet
 
+## Day 17 1-2-2017
+* text-allign: justify; bij uitleg kopjes
+
+* Kleuren buttons groen gemaakt zodat ze matchen met de navbar. Donutchart ook een grone kleur gegeven ipv paars.
+
+* Verslag en Readme
+
 ## to do:
 * navbar
 
 * verslag
+
+* code verbeteren

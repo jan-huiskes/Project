@@ -1,7 +1,7 @@
 // Jan Huiskes
 // 10740929
 // JS bestand voor de barchart in de resultaten sectie
-
+// bron: https://bost.ocks.org/mike/bar/3/
 
 // Zie info.js voor commentaar (is exact hetzelfde)
 var svg = d3.select("#bar2").append("svg").attr("class", "chart")
