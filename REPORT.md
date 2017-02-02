@@ -3,7 +3,7 @@
 ## Algemeen
 
 Op 8 november 2016 werd er in Amerika gestemd voor een nieuwe president. De strijd ging
-dit keer tussen Hilary Clinton van de Democratische partij en Donald Trump van de Republikeinse partij. 
+dit keer tussen Hilary Clinton van de Democratische partij en Donald Trump van de Republikeinse partij.
 
 Screenshot: ![](doc/scrn1.png)
 
@@ -35,6 +35,10 @@ De kaart heeft een bug waar ik niks aan kan doen en dat heeft met de datamaps co
 * info.js maakt de barcharts in de informatie sectie met de globale uitslag. Deze doet het op dezelfde manier als bar.js. Dit tel ik niet als visualisatie, maar is wel belangrijk voor het informatie gedeelte.
 
 * scroll.js is een functie die fancy scrolling met de navbar mogelijk maakt.
+
+### Filmpje
+
+Het filmpje op mijn pagina lijkt het op de ene computer wel te doen en op de andere niet. Ook geeft het errors maar die zijn niet erg en lijken ook op andere pagina's zo voor te komen. Dit lijkt zo te zijn vanwege adblocker
 
 ## Veranderingen tegenover het eerste design
 
