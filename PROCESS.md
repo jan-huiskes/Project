@@ -112,15 +112,15 @@ Omdat ik maandag niet kan werken, is dit wat ik ongeveer had gedaan:
 * Legenda partijen in het midden gezet
 
 ## Day 17 1-2-2017
-* text-allign: justify; bij uitleg kopjes
+* Text-allign: justify; bij uitleg kopjes
 
 * Kleuren buttons groen gemaakt zodat ze matchen met de navbar. Donutchart ook een grone kleur gegeven ipv paars.
 
 * Verslag en Readme
 
-## to do:
-* navbar
+## Day 18 2-2-2017
+* Navbar collapse gemaakt
 
-* verslag
+* Verslag afgemaakt
 
-* code verbeteren
+* Alles is klaar!

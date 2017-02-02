@@ -14,24 +14,28 @@
      <link rel="shortcut icon" type="image/png" href="/image/fav.png">
 
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
      <script src="d3/d3-topojson.js"></script>
      <script src="d3/datamaps.usa.min.js"></script>
      <script src="d3/d3-tooltip.js"></script>
     </head>
     <body>
-      <div class="container-fluid" id="nav">
-        <nav class="navbar navbar-default navbar-fixed-top">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
               <li> <a id='link-flag' href="#page-info"><img src="image/flag.png" id="flag" ></a></li>
             </div>
-            <ul id="nav">
+            <ul class="collapse navbar-collapse" id="nav">
               <li><a href="#info">Het Amerikaanse kiesstelsel</a></li>
               <li><a href="#resultaten">Verkiezingsresultaten 2016</a></li>
               <li><a href="#video">Film</a></li>
               <li><a href="#bronnen">Bronnen</a></li>
             </ul>
         </nav>
-      </div>
 
       <div class='container-fluid' id="page-info">
         <div id="text-container">
@@ -48,7 +52,7 @@
             <h3>De kandidaten</h3>
             <p>
               Op 8 november 2016 werd er in Amerika gestemd voor een nieuwe president. De strijd ging
-              dit keer tussen Hilary Clinton en Donald Trump. Clinton had al veel ervaring in de politieke wereld en
+              dit keer tussen Hilary Clinton van de Democratische partij n Donald Trump van de Republikeinse partij. Clinton had al veel ervaring in de politieke wereld en
               Trump was een nieuwkomer uit de zakenwereld. Er waren ook andere partijen en kandidaten, maar die hadden zo weinig populariteit dat
               ze er niet echt toe deden.
             </p>
@@ -98,6 +102,8 @@
               Zo heeft Alabama 3 kiesmannen met 1 miljoen inwoners en California 55 met 37 miljoen inwoners.
               Het aantal kiesmannen per staat worden iedere 10 jaar opnieuw verdeeld. De laatste keer dat de kiesmannen waren verdeeld
               was in 2010.
+              Tijdens de verkiezingen is het dan ook vooral belangrijk om de zogenaamde 'swing states' te winnen. Dit zijn de
+              staten waar de uitslag en dus de winst kan variëren voor de partijen.
             </p>
             <div class="figure">
               <p><img src="image/winner.jpg" class ='img-circle' width='300px' height='300px'>
@@ -244,6 +250,7 @@
         <h1> Bronnen </h1>
         <div class='row'><h5>http://www.presidency.ucsb.edu/showelection.php?year=2016</div>
         <div class='row'><h5>"Table 233. Educational Attainment by State". United States Census Bureau. 2011. Archived from the original on February 21, 2012. Retrieved 2014-05-23.</div>
+        <h4 style='float: right'> Jan Huiskes</h4>
       </div>
 
       <script src="js/map.js"></script>
